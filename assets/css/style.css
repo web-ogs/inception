@@ -148,7 +148,9 @@ h6 {
 }
     #hero .pink {
         color: rgb(249, 0, 123);
+      
     }
+
 
     #hero .rotating > .animated {
         display: inline-block;
@@ -167,7 +169,7 @@ h6 {
  }
 
   #hero h1 {
-            margin: 30px 0 10px 0;
+            margin: 20px 0 10px 0;
             font-weight: 500;
             line-height: 90px;
             text-transform: uppercase;
@@ -175,12 +177,15 @@ h6 {
             font-size: 110px;
         }
     @media (max-width: 768px) {    
+        #hero{
+            margin-top:140px;
+        }
         #hero h1 {
             font-size: 50px;
             line-height: 45px;
         }
         #hero .my-5 {
-            margin-top: 10px !important;
+            margin-top: 0px !important;
         }
     }
 
@@ -203,6 +208,8 @@ h6 {
     font-weight: 600;
     padding-left: 10px;
     margin-bottom: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
     .section-description {
@@ -240,9 +247,24 @@ h6 {
 
     @media (max-width: 768px) {
         .intro-text p {
-            font-size: 14px;
+            font-size: 13px;
         }
+
+        #intro .hide {
+            display: none;
+        }
+
+
     }
+.alignright {
+    text-align: right;
+}
+
+.codedText {
+    padding: 20px 25px;
+    padding-top: 45px;
+    transform: translateY(-50%);
+}
 
 
     /* About Section
@@ -266,30 +288,16 @@ h6 {
 --------------------------------*/
 
 
-.valuesbox {
-    height: 230px;
-    position: relative;
+#values p{
+    color:#fff;
     font-size: 20px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fff;
-    vertical-align: middle;
-    padding: 25px 20px;
-    text-align: center;
+    text-align:center;
 }
-.codedText {
-    padding: 20px 25px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+@media (max-width: 768px) {
+   #values p{
+       margin-bottom:65px;
+   }
 }
-    @media (max-width: 768px) {
-        .valuesbox {
-            height: 190px;
-            font-size: 15px;
-        }
-    }
-
 
 
     /* Contact Section
@@ -591,6 +599,17 @@ h6 {
             }
 
 
+
+@media (max-width: 768px) {
+    .navbar a,
+    .navbar a:focus {
+      
+        padding: 10px 0 10px 12px;
+        
+    }
+}
+
+
     /**
 * Mobile Navigation 
 */
@@ -644,7 +663,7 @@ h6 {
 
         .navbar-mobile a,
         .navbar-mobile a:focus {
-            padding: 10px 20px;
+            padding: 5px 10px;
             font-size: 15px;
             color: #fff;
         }
@@ -838,8 +857,11 @@ h6 {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-    padding: 10px 0;
     color: rgb(249, 0, 123);
+}
+#footer .card{
+    padding-top:0px;
+
 }
 
         #footer .copyright {
