@@ -7,24 +7,6 @@
 # General
 --------------------------------------------------------------*/
 
-
-@font-face {
-    font-family: 'creato_displaybold';
-    src: url('/assets/vendor/fonts/creatodisplay-bold-webfont.woff2') format('woff2'), url('/assets/vendor/fonts/creatodisplay-bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'creato_displaymedium';
-    src: url('/assets/vendor/fonts/creatodisplay-medium-webfont.woff2') format('woff2'), url('/assets/vendor/fonts/creatodisplay-medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-
 body {
     font-family: "Jura", sans-serif;
     color: rgb(249, 0, 123);
@@ -51,7 +33,7 @@ p {
 }
 
 h1 {
-    font-family: "Creato Display", sans-serif;
+    font-family: "Raleway Bold", sans-serif;
     font-weight: 800;
     margin: 0 0 20px 0;
     padding: 0;
@@ -68,67 +50,6 @@ h6 {
     margin: 0 0 20px 0;
     padding: 0;
 }
-
-
-
-
-
-/* Prelaoder */
-#preloader {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: hidden;
-}
-
-.loader-wrapper {
-    display: inline-block;
-}
-.loader{
-    display:inline-block;
-    width:30px;
-    height:30px;
-    position:relative;   
-    border:4px solid #f9007b;
-    animation: loader 2s infinite ease;
-}
-.loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color:#f9007b;
-    animation: loader-inner 2s infinite ease-in;
-}
-
-.hidden{
-    display:none;
-}
-
-.loader-txt {
- 
-}
-
-@keyframes loader {
-    0% {transform: rotate(0deg);}
-    25% {transform: rotate(180deg);}
-    50% { transform: rotate(180deg);}
-    75% {transform: rotate(360deg);}
-    100% {transform: rotate(360deg);}
-    }
-@keyframes loader-inner {
-    0% {  height: 0%; }
-    25% {  height: 0%; }
-    50% {  height: 100%; }
-    75% {  height: 100%; }
-    100% {height: 0%; }
-}
-
 
 
 /*--------------------------------------------------------------
@@ -255,11 +176,11 @@ h6 {
         }
     @media (max-width: 768px) {    
         #hero h1 {
-            font-size: 45px;
-            line-height: 55px;
+            font-size: 50px;
+            line-height: 45px;
         }
         #hero .my-5 {
-            margin-top: 30px !important;
+            margin-top: 10px !important;
         }
     }
 
@@ -346,7 +267,7 @@ h6 {
 
 
 .valuesbox {
-    height: 260px;
+    height: 230px;
     position: relative;
     font-size: 20px;
     text-transform: uppercase;
@@ -361,7 +282,6 @@ h6 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    text-align: center; 
 }
     @media (max-width: 768px) {
         .valuesbox {
@@ -447,7 +367,7 @@ h6 {
     /*--------------------------------------------------------------
 # Header TOP
 --------------------------------------------------------------*/
-    #header-top {
+    #header {
         transition: all 0.5s;
         z-index: 997;
         height: 70px;
@@ -456,7 +376,7 @@ h6 {
         right: 5em;
     }
 
-        #header-top .header-container {
+        #header .header-container {
             width: 100%;
             transition: all 0.5s;
             z-index: 997;
@@ -467,14 +387,14 @@ h6 {
         }
 
     @media (max-width: 992px) {
-        #header-top {
+        #header {
             height: 60px;
             left: -2em;
             right: -2em;
         }
     }
 
-    #header-top .logo {
+    #header .logo {
         font-size: 15px;
         margin: 0;
         padding: 0;
@@ -484,10 +404,7 @@ h6 {
         text-transform: uppercase;
     }
 
-        #header-top .logo a {
-        }
-
-        #header-top .logo img {
+        #header .logo img {
             height: 50px;
         }
 
@@ -500,12 +417,12 @@ h6 {
             margin-top: 60px;
         }
 
-        #header-top .logo {
+        #header .logo {
             display: none;
         }
     }
 
-    #header-top .actions a {
+    #header .actions a {
         text-transform: uppercase;
         font-weight: 500;
         font-size: 16px;
