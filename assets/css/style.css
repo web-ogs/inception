@@ -9,20 +9,20 @@
 
 body {
     font-family: "Jura", sans-serif;
-    color: rgb(249, 0, 123);
+    color: #f9007b;
     background-color: #000;
 }
 
 a {
     text-decoration: none;
-    color: rgb(249, 0, 123);
+    color: #f9007b;
     transition: 0.5s;
 }
 
     a:hover,
     a:active,
     a:focus {
-        color: rgb(249, 0, 123);
+        color: #f9007b;
         outline: none;
         text-decoration: none;
     }
@@ -51,6 +51,108 @@ h6 {
     padding: 0;
 }
 
+@media (max-width: 600px) {
+    .row {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* Prelaoder */
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #000 center center;
+}
+
+
+    #preloader h2 {
+        font-size: 1.3em;
+        text-align: center;
+        animation: animate 1s linear infinite;
+        animation-duration:1s;
+    }
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+.pre-container {
+    margin: 100px auto;
+    margin-top: 300px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.progress2 {
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.progress-bar2 {
+    height: 18px;
+    border-radius: 30px;
+    transition: 0.3s linear;
+    transition-property: width, background-color;
+}
+
+.progress-moved .progress-bar2 {
+    background-color: #f9007b;
+    animation: progress 3s ;
+}
+
+@keyframes progress {
+    0% {
+        width: 0%;
+        background: #f9007b;
+    }
+
+    100% {
+        width: 100%;
+        background: #f9007b;
+        box-shadow: 0 0 30px #f9007b;
+    }
+}
+
+
+.loader {
+    --p: 0;
+    animation: p 3s steps(100);
+    
+    font-size: 2.1em;
+    position: absolute;
+    bottom: 45px;
+    left: 325px;
+    color: #f9007b;
+}
+
+    .loader:after {
+        content: counter(p) "%";
+    }
+
+@keyframes p {
+    90%, 100% {
+        --p: 100;
+    }
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -62,7 +164,7 @@ h6 {
     right: 85px;
     bottom: 115px;
     z-index: 996;
-    background: rgb(249, 0, 123);
+    background: #f9007b;
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -107,13 +209,15 @@ h6 {
     #blackoverlay {
         width: 100%;
         height: 100vh;
-        background-color: rgba(0,0,0,0.7);
+        background-color: rgba(0,0,0,0.6);
     }
 
-    .vanta-fixed-container {
-        position: relative;
-        padding-bottom: 2em;
-    }
+.vanta-fixed-container {
+    position: relative;
+    padding-bottom: 2em;
+    
+}
+
 
 .card {
     background: none;
@@ -140,10 +244,10 @@ h6 {
 # HERO SECTION
 --------------------------------------------------------------*/
 #hero {
-    margin-top:300px;
+    margin-top:260px;
     display: table;
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     vertical-align: middle;
 }
     #hero .pink {
@@ -171,23 +275,109 @@ h6 {
   #hero h1 {
             margin: 20px 0 10px 0;
             font-weight: 500;
-            line-height: 90px;
+            line-height: 98px;
             text-transform: uppercase;
             color: #fff;
-            font-size: 110px;
+            font-size: 115px;
         }
-    @media (max-width: 768px) {    
+    @media (max-width: 600px) {    
         #hero{
             margin-top:140px;
+            height:60vh;
         }
         #hero h1 {
-            font-size: 50px;
-            line-height: 45px;
+            font-size: 70px;
+            line-height: 50px;
         }
         #hero .my-5 {
             margin-top: 0px !important;
         }
     }
+
+
+    /*SCROLL*/
+
+
+
+.scroll-container {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+    .chevron:first-child {
+        animation: move 3s ease-out 1s infinite;
+    }
+
+    .chevron:nth-child(2) {
+        animation: move 3s ease-out 2s infinite;
+    }
+
+    .chevron:before,
+    .chevron:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 51%;
+        background: #f9007b;
+    }
+
+    .chevron:before {
+        left: 0;
+        transform: skew(0deg, 30deg);
+    }
+
+    .chevron:after {
+        right: 0;
+        width: 50%;
+        transform: skew(0deg, -30deg);
+    }
+
+@keyframes move {
+    25% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
+.text {
+    display: block;
+    margin-top: 35px;
+    margin-left: -30px;
+    font-size: 12px;
+    color: #f9007b;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+ 
+}
+
+
+
 
     /*--------------------------------------------------------------
 # Sections
@@ -245,7 +435,7 @@ h6 {
         text-align:center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
         .intro-text p {
             font-size: 13px;
         }
@@ -261,7 +451,6 @@ h6 {
 }
 
 .codedText {
-    padding: 20px 25px;
     padding-top: 45px;
     transform: translateY(-50%);
 }
@@ -288,12 +477,22 @@ h6 {
 --------------------------------*/
 
 
-#values p{
-    color:#fff;
+#values p {
+    color: #fff;
     font-size: 20px;
-    text-align:center;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
-@media (max-width: 768px) {
+
+    #values p:hover {
+       
+        color: #f9007b;
+        text-shadow: 0px 0px 30px #f9007b;
+    }
+
+@media (max-width: 600px) {
    #values p{
        margin-bottom:65px;
    }
@@ -352,10 +551,18 @@ h6 {
             margin: 10px;
         }
 
-    #contact button {
-        padding: 10px 20px;
-        border:none;
-    }
+#contact button {
+    padding: 10px 20px;
+    border: none;
+    border: 2px solid #f9007b;
+}
+
+        #contact button:hover {
+            background: none;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 2px;
+        }
 
 .btn-send-mail {
     background: rgb(249, 0, 123);
@@ -364,13 +571,15 @@ h6 {
     padding: 10px, 15px;
     margin-bottom: 25px;
     text-transform: uppercase;
+    border-radius: 2px;
 }
 
-        .btn-send-mail:hover {
-            background: none;
-            border: 2px solid #fff;
-            color: #fff;
-        }
+    .btn-send-mail:hover {
+        background: none;
+        border: 2px solid #fff;
+        color: #fff;
+        border-radius: 2px;
+    }
 
     /*--------------------------------------------------------------
 # Header TOP
@@ -390,8 +599,8 @@ h6 {
             z-index: 997;
             height: 70px;
             bottom: 0px;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 40px;
+            padding-right: 40px;
         }
 
     @media (max-width: 992px) {
@@ -465,7 +674,7 @@ h6 {
     @media (max-width: 768px) {
         .socials a {
             padding: 0.5em;
-            font-size: 0.85em;
+            font-size: 1.5em;
         }
     }
 
