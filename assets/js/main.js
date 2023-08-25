@@ -156,7 +156,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 preloader.remove()
-            }, 3000);
+            }, 2500);
         });
     }
 
@@ -178,6 +178,9 @@
         });
     }   
 
+
+
+
     /**
      * Animation on scroll
      */
@@ -198,23 +201,30 @@
 
 
     /*--------------------------------------------------------------
-# Hover
+# decode
 --------------------------------------------------------------*/
-    
+
+
+
     const text = baffle(".codedText");
     text.set({
         characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456890;[]\,./><&%!*',
         speed: 50
     });
     text.start();
-        text.reveal(6500);
-
-  
+    text.reveal(8500);
 
 
 
+    const maintext = baffle(".maincodedText");
+    maintext.set({
+        characters: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ123456890;[]\,./><&%!*',
+        speed: 85
+    });
+    maintext.start();
+    maintext.reveal(6500);
 
-  
+
 
     /**
      * END

@@ -66,7 +66,7 @@ h6 {
     z-index: 999;
     width: 100%;
     height: 100%;
-    overflow: visible;
+    overflow: hidden;
     background: #000 center center;
 }
 
@@ -240,14 +240,38 @@ h6 {
 
 
 
+
+
+
+
+
+
+
+
+
+
     /*--------------------------------------------------------------
 # HERO SECTION
 --------------------------------------------------------------*/
+
+.maincodedText {
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+    line-height: 100px;
+    text-transform: uppercase;
+    overflow: hidden;
+    color: rgb(249, 0, 123);
+    font-size: 115px;
+    font-family: "Archivo", sans-serif;
+    max-width:100%;
+    max-height:110px;
+}
+
 #hero {
-    margin-top:250px;
+    margin-top: 260px;
     display: table;
     width: 100%;
-    min-height: 60vh;
+    min-height: 50vh;
     vertical-align: middle;
 }
 #hero .pink {
@@ -284,6 +308,9 @@ h6 {
             font-size: 115px;
         }
 
+
+
+
 @media (max-width: 1200px) {
     #hero {
         margin-top: 190px;
@@ -294,7 +321,14 @@ h6 {
             font-size: 97px;
             line-height: 85px;
         }
-}
+
+    .maincodedText {
+
+        line-height: 85px;
+        font-size: 97px;
+        max-height: 180px;
+    }
+    }
 
 @media (max-width: 992px) {
     #hero {
@@ -306,13 +340,18 @@ h6 {
             font-size: 86px;
             line-height: 72px;
         }
+    .maincodedText {
+        line-height: 72px;
+        font-size: 86px;
+        max-height: 140px;
+    }
 }
 
 
     @media (max-width: 600px) {    
         #hero{
-            margin-top:160px;
-            height:60vh;
+            margin-top:180px;
+            height:50vh;
         }
         #hero h1 {
             font-size: 62px;
@@ -320,6 +359,12 @@ h6 {
         }
         #hero .my-5 {
             margin-top: 0px !important;
+        }
+
+        .maincodedText {
+            line-height: 55px;
+            font-size: 62px;
+            max-height: 180px;
         }
     }
 
@@ -334,6 +379,7 @@ h6 {
 
 .scroll-container {
     margin-left:25px;
+    margin-bottom: 100px;
     position: relative;
     width: 24px;
     height: 24px;
@@ -398,7 +444,7 @@ h6 {
     }
 }
 
-.text {
+.scrolltext {
     display: block;
     margin-top: 35px;
     margin-left: -30px;
@@ -406,8 +452,6 @@ h6 {
     color: #f9007b;
     text-transform: uppercase;
     white-space: nowrap;
-
- 
 }
 
 
@@ -484,14 +528,15 @@ h6 {
     text-align: right;
 }
 
-.codedText {
-    padding-top: 45px;
-    transform: translateY(-50%);
-}
 
 
     /* About Section
 --------------------------------*/
+    #about .section-title{
+        padding-top:0;
+        padding-bottom:0;
+    }
+
 
     #about p {
         color: #fff;
@@ -507,10 +552,12 @@ h6 {
         font-size: 25px;
     }
 
-    /* VALUES Section
+
+
+
+
+/* VALUES Section
 --------------------------------*/
-
-
 #values p {
     color: #fff;
     font-size: 20px;
@@ -527,9 +574,10 @@ h6 {
     }
 
 @media (max-width: 600px) {
-   #values p{
-       margin-bottom:65px;
-   }
+    #values p {
+        margin-bottom: 65px;
+        font-size: 15px;
+    }
 }
 
 
@@ -933,6 +981,7 @@ h6 {
     margin: 20px auto;
     -webkit-animation: rescale 2s infinite;
     animation: rescale 2s infinite;
+  
     left: 0;
     margin-top: -30px;
     margin-left: 0em;
