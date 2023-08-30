@@ -81,6 +81,14 @@ h6 {
     padding-top: 30px;
 }
 
+@media (max-width: 600px) {
+    .card {
+      
+        padding: 10px;
+        padding-top: 10px;
+    }
+}
+
 .pink{
     color:#f9007b;
 }
@@ -150,6 +158,11 @@ hr.dashed {
             font-size: 60px;
             line-height: 50px;
             font-weight: 400;
+        }
+        h3 {
+            font-size: 30px;
+            line-height: 25px;
+           
         }
     }
     /*--------------------------------------------------------------
@@ -247,7 +260,10 @@ hr.dashed {
 }
 
 @media (max-width: 600px) {
-    #hero {
+    .hero-top {
+        padding-top: 8%;
+        font-weight: 500;
+        font-size: 10px;
     }
 }
 
@@ -445,6 +461,13 @@ hr.dashed {
     width:500px;
 
 }
+@media (max-width: 600px) {
+    .about-text {
+        padding-left: 20px;
+        
+    }
+}
+
 
 
 /*--------------------------------------------------------------
@@ -539,6 +562,17 @@ hr.dashed {
         color: #f9007b;
         font-weight: 600;
     }
+
+@media (max-width: 600px) {
+    .modal-title {
+        font-size: 20px;      
+ 
+    }
+    .modal-content {
+    
+        width: 95%;
+    }
+}
 
     /* The Close Button */
     .close1 {
