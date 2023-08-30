@@ -84,8 +84,8 @@ h6 {
 @media (max-width: 600px) {
     .card {
       
-        padding: 10px;
-        padding-top: 10px;
+        padding: 12px;
+        padding-top: 12px;
     }
 }
 
@@ -155,14 +155,18 @@ hr.dashed {
 
     @media (max-width: 600px) {
         h1 {
-            font-size: 60px;
+            font-size: 58px;
             line-height: 50px;
             font-weight: 400;
         }
         h3 {
-            font-size: 30px;
+            font-size: 22px;
             line-height: 25px;
            
+        }
+        hr.dashed {
+            border-top: 2px dashed #f9007b;
+            margin-bottom: 25px;
         }
     }
     /*--------------------------------------------------------------
@@ -261,7 +265,7 @@ hr.dashed {
 
 @media (max-width: 600px) {
     .hero-top {
-        padding-top: 8%;
+        padding-top: 11%;
         font-weight: 500;
         font-size: 10px;
     }
@@ -288,41 +292,49 @@ hr.dashed {
         left: 3em;
         right: 3em;
     }
+@media (max-width: 600px) {
+    #header-top {
+     
+        left: 12px;
+        right: 12px;
+    }
+}
 
-        #header-top .button {
-            text-transform: uppercase;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 10px;
-            color: #f9007b;
-            border: 1px solid #f9007b;
-            text-align: center;
-            width: 150px;
-            margin-top: 65px;
-            margin-bottom: 65px;
-            background-color: #000;
-        }
 
-        #header-top i {
-            font-size: 18px;
-            margin-right: 10px;
-        }
+    #header-top .button {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px;
+        color: #f9007b;
+        border: 1px solid #f9007b;
+        text-align: center;
+        width: 150px;
+        margin-top: 65px;
+        margin-bottom: 65px;
+        background-color: #000;
+    }
 
-        #header-top .button ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-            align-items: center;
-        }
+    #header-top i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
 
-        #header-top .button:hover {
-            font-weight: 500;
-            color: #000;
-            background-color: #f9007b;
-            border: 1px solid #f9007b;
-            cursor: pointer;
-        }
+    #header-top .button ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        align-items: center;
+    }
+
+    #header-top .button:hover {
+        font-weight: 500;
+        color: #000;
+        background-color: #f9007b;
+        border: 1px solid #f9007b;
+        cursor: pointer;
+    }
 
 
     .dropbtn {
@@ -386,6 +398,7 @@ hr.dashed {
         right: 3em;
     }
 
+
         #header-btm .header-container {
             width: 100%;
             transition: all 0.5s;
@@ -402,6 +415,21 @@ hr.dashed {
             height: 30px;
             vertical-align: central;
         }
+
+
+@media (max-width: 600px) {
+    #header-btm {
+        left: 12px;
+        right: 12px;
+    }
+        #header-btm .logo img {
+            height: 20px;    
+        }
+        #header-btm .header-container {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+}
 
 
     .navbar {
@@ -456,30 +484,34 @@ hr.dashed {
     }
 
 
-.about-text{
-    padding-left:50px;
-    width:500px;
-
-}
-@media (max-width: 600px) {
     .about-text {
-        padding-left: 20px;
-        
+        padding-left: 50px;
+        width: 500px;
+    }
+
+    @media (max-width: 600px) {
+        .about-text {
+            padding-left: 0px;
+        }
+    }
+
+@media (max-width: 600px) {
+    #header-btm {
+        left: 10px;
+        right: 10px;
     }
 }
 
-
-
-/*--------------------------------------------------------------
+    /*--------------------------------------------------------------
 # SOLUTIONS
 --------------------------------------------------------------*/
-.solutions-title {
-    font-size: 40px;
-    font-weight: 400;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border-bottom: #f9007b solid 0.5px;
-}
+    .solutions-title {
+        font-size: 40px;
+        font-weight: 400;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        border-bottom: #f9007b solid 0.5px;
+    }
 
     .right {
         position: relative;
@@ -513,7 +545,14 @@ hr.dashed {
             background-color: #f9007b;
         }
 
-
+@media (max-width: 600px) {
+    .solutions-hover i {
+        font-size:15px;
+        padding-top: 0.1%;
+        padding-bottom: 0.1%;
+        
+    }
+}
 
     /*--------------------------------------------------------------
 # SOLUTIONS POP UP
@@ -563,16 +602,15 @@ hr.dashed {
         font-weight: 600;
     }
 
-@media (max-width: 600px) {
-    .modal-title {
-        font-size: 20px;      
- 
+    @media (max-width: 600px) {
+        .modal-title {
+            font-size: 20px;
+        }
+
+        .modal-content {
+            width: 95%;
+        }
     }
-    .modal-content {
-    
-        width: 95%;
-    }
-}
 
     /* The Close Button */
     .close1 {
@@ -688,6 +726,16 @@ hr.dashed {
         margin-bottom: -35px;
     }
 
+@media (max-width: 600px) {
+    #contact {
+        margin-bottom: 10px;
+    }
+        #contact button {
+            margin-top: 25px;
+            margin-bottom: 35px;
+        }
+}
+
     /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -707,6 +755,9 @@ hr.dashed {
         #footer {
             font-size: 10px;
         }
+            #footer .copyright {
+                margin-bottom: 40px;
+            }
     }
 
 
