@@ -133,6 +133,7 @@ hr.dashed {
 }
 .seperator {
     margin: 3%;
+    overflow: hidden;
 }
 
 
@@ -166,12 +167,12 @@ hr.dashed {
 
     @media (max-width: 600px) {
         h1 {
-            font-size: 58px;
+            font-size: 50px;
             line-height: 50px;
             font-weight: 400;
         }
         h3 {
-            font-size: 39px;
+            font-size: 30px;
             line-height: 30px;
            
         }
@@ -713,7 +714,7 @@ main {
 
        
 
-}
+
 
     /*--------------------------------------------------------------
 # SOLUTIONS
@@ -757,7 +758,18 @@ main {
         }
 
 
+@media (max-width: 600px) {
+    .solutions-hover {
 
+        padding-left: 0%;
+
+    }
+    .solutions-hover i {
+       
+        padding-top: 2%;
+     font-size:1em;
+    }
+}
 
 
     /*--------------------------------------------------------------
