@@ -463,8 +463,10 @@ window.addEventListener('load', navbarlinksActive)
     let preloader = select('#preloader-page');
     if (preloader) {
         window.addEventListener('load', () => {
+            document.body.style.overflow = 'hidden'
             setTimeout(() => {
-                preloader.remove()
+                preloader.remove(),
+                document.body.style.overflow = ''
             }, 5000);
         });
     }

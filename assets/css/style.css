@@ -11,6 +11,7 @@ body {
     font-family: "Jura", sans-serif;
     color: #f9007b;
     background-color: #000;
+    overflow-x: hidden;
 }
 
 a {
@@ -31,15 +32,12 @@ a {
 p {
     padding: 0;
     margin: 0 0 30px 0;
-    font-size:18px;
+    font-size:16px;
 }
 
 h1 {
     font-family: "Archivo", sans-serif;
-    font-size:135px;
-    line-height:120px;
     font-weight: 400;
-    margin: 0 0 20px 0;
     padding: 0;
 }
 
@@ -82,8 +80,7 @@ h6 {
 }
 
 @media (max-width: 600px) {
-    .card {
-      
+    .card {     
         padding: 15px;
         padding-top: 35px;
     }
@@ -136,44 +133,8 @@ hr.dashed {
     overflow: hidden;
 }
 
-
-@media (max-width: 1700px) {
-    h1 {
-            font-size: 105px;
-            line-height: 95px;
-            font-weight: 400;
-        }
-    p {
-        font-size: 15px;
-    }
-    }
-
-    @media (max-width: 1300px) {
-        h1 {
-            font-size: 80px;
-            line-height: 70px;
-            font-weight: 400;
-        }
-    }
-
-    @media (max-width: 900px) {
-        h1 {
-            font-size: 70px;
-            line-height: 60px;
-            font-weight: 400;
-        }
-
-        p {
-            font-size: 15px;
-        }
-    }
-
     @media (max-width: 600px) {
-        h1 {
-            font-size: 50px;
-            line-height: 50px;
-            font-weight: 400;
-        }
+       
         h3 {
             font-size: 30px;
             line-height: 30px;
@@ -193,33 +154,7 @@ hr.dashed {
         }
     }
 
-@media (max-width: 400px) {
-    h1 {
-        font-size: 40px;
-        line-height: 35px;
-        font-weight: 400;
-    }
 
-    h3 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-
-    hr.dashed {
-        border-top: 2px dashed #f9007b;
-        margin-bottom: 25px;
-    }
-
-    .three {
-        margin-top: -37px;
-        margin-bottom: 25px;
-    }
-
-    .three1 {
-        margin-top: -37px;
-        margin-bottom: 25px;
-    }
-}
     /*--------------------------------------------------------------
 # Vanta Canvas
 --------------------------------------------------------------*/
@@ -245,33 +180,27 @@ hr.dashed {
 /*--------------------------------------------------------------
 # preloader
 --------------------------------------------------------------*/
-
 #preloader-page {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 999;
+    z-index: 9999;
     width: 100vw;
     height: 100vh;
     overflow: hidden !important;
     background: #000 center center;
 }
-
 .pre-container {
     margin: 100px auto;
-    margin-top: 20%;
+    margin-top: 350px;
     width: 300px;
     text-align: center;
     position: relative;
 }
-
-
 .loading-text {
     text-align: left;
-    margin-top: 10px;
- 
+    margin-top: 10px; 
 }
-
 .progress2 {
     background-color: #000;
     border: 1px solid #f9007b;
@@ -299,7 +228,7 @@ hr.dashed {
 
 
 
-    /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 # page load anims
 --------------------------------------------------------------*/
 
@@ -308,9 +237,7 @@ main {
     animation-duration:1s;
     animation-timing-function: ease-in-out;
     animation-delay:5s;
-
 }
-
 @keyframes slideInLeft {
     0%{
        opacity:0.8;
@@ -320,7 +247,6 @@ main {
         opacity:1;
         transform: translateX(0);
     }
-
 }
 
 header {
@@ -329,7 +255,6 @@ header {
     animation-timing-function: ease-in-out;
     animation-delay: 5s;
 }
-
 @keyframes slideInLeft2 {
     0% {
         opacity: 0;
@@ -339,7 +264,6 @@ header {
         opacity: 0;
         transform: translateX(-20%);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -368,10 +292,36 @@ h1 {
 
 
 
-.code {
-    overflow:hidden;
+/*--------------------------------------------------------------
+# TOP LINE
+--------------------------------------------------------------*/
+
+
+#top-line {
+    margin-top: 80px;
+    width: 100%;
+    height: 100px;
+    display: block;
+}
+.top-title-coloumn1 {
+    width: 25%;
+}
+.top-title-coloumn2 {
+    width: 50%;
+}
+@media (max-width: 900px) {
+    #top-line {
+        margin-left: 10px;
+        font-size: 14px;
+    }
 }
 
+@media (max-width: 600px) {
+    #top-line {
+        margin-left: 10px;
+        font-size: 10px;
+    }
+}
 
 
 
@@ -380,155 +330,89 @@ h1 {
 --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: 100vh;
+    height: 500px;
     top: 50%;
 }
-
-    .hero-top {
-        padding-top: 5%;
-        font-weight: 600;
-    }
 
 .hero-main {
     /* spacing */
     padding-left: 2%;
-    padding-top: 6%;
-    padding-bottom: 6%;
+    padding-top: 3%;
+    padding-bottom: 2%;
     overflow: hidden;
 }
 
 .hero-text-1 {
-   
+    overflow: hidden;
 }
 .hero-text-2 {
-    text-align: right;
-    padding-right: 2%;
+    padding-left:10%;
 }
-.hero-text-3 {
-    text-align: center;
-}
-
-        .hero-main h1 {
-            margin-bottom:-0.5%;
-        }
-
-
-    .hero-btm {
-        margin-top:35px;
-        font-weight: 600;
-    }
-
-        .hero-btm i {
-            font-size: 20px;
-            margin-right: 22px;
-        }
-
-#hero .top-title-coloumn1{
-    width:20%;
-}
-#hero .top-title-coloumn2 {
-    width: 60%;
-}
-#hero .top-title-coloumn3 {
-    width: 20%;
+.code {
+    overflow: hidden;
 }
 
+#hero h1 {
+    font-size: 130px;
+    line-height: 100px;
+}
 
 @media (max-width: 1600px) {
-    #hero {
-        height: 80vh;
-    }
-    .hero-top {
-        padding-top: 8%;
-        font-weight: 600;
-        font-size:14px;
+    #hero h1 {
+        font-size: 110px;
+        line-height: 90px;
     }
 }
 
 @media (max-width: 1300px) {
-    #hero {
-        height: 85vh;
+    #hero h1 {
+        font-size: 90px;
+        line-height: 75px;
     }
-
-    .hero-top {
-        padding-top: 10%;
-        font-weight: 600;
-        font-size: 14px;
+}
+@media (max-width: 1100px) {
+    #hero h1 {
+        font-size: 80px;
+        line-height: 75px;
     }
 }
 
 @media (max-width: 900px) {
-    #hero {
-        height: 80vh;
+    #hero h1 {
+        font-size: 75px;
+        line-height: 60px;
     }
-    .hero-top {
-        padding-top: 15%;
-        font-weight: 600;
-        font-size: 14px;
-    }
-}
 
+}
 @media (max-width: 600px) {
+    #hero h1 {
+        font-size: 55px;
+        line-height: 45px;
+    }
     #hero {
-        height: 78vh;
+        height: 400px;
     }
-    .hero-top {
-        padding-top: 23%;
-        font-weight: 600;
-        font-size: 11px;
-    }
-    .hero-main {
-
-        padding-top: 14%;
-        
-    }
-    .hero-text-2 {
-        text-align: left;
-        padding-right: 0%;
-    }
-    .hero-text-3 {
-        text-align: left;
-        padding-right: 0%;
-    }
-
-    #hero .top-title-coloumn1 {
-        width: 30%;
-    }
-
-    #hero .top-title-coloumn2 {
-        width: 40%;
-    }
-
-    #hero .top-title-coloumn3 {
-        width: 30%;
-    }
-   
-  
 }
-
-
 @media (max-width: 400px) {
+    #hero h1 {
+        font-size: 30px;
+        line-height: 25px;
+    }
+
     #hero {
-        height: 58vh;
+        height: 280px;
+    }
+}
+@media (max-width: 200px) {
+    #hero h1 {
+        font-size: 20px;
+        line-height: 15px;
     }
 
-    .hero-top {
-        padding-top: 25%;
-        font-weight: 600;
-        font-size: 11px;
+    #hero {
+        height: 230px;
     }
-
 }
-
-    /*--------------------------------------------------------------
-# HERO SLIDE IN ANIM
---------------------------------------------------------------*/
-
-
-.herotextAnimLeft {
-    transform: translateX(100px); /* Equal to translate(100px) */
-}
-
 
 
 
@@ -547,9 +431,7 @@ h1 {
         right: 12px;
     }
 }
-
-
-    #header-top .button {
+#header-top .button {
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 500;
@@ -587,8 +469,7 @@ h1 {
     }
 
 
-.dropbtn {
-  
+.dropbtn { 
     text-transform: uppercase;
     background-color: #000;
     border: 1px solid #f9007b;
@@ -598,50 +479,48 @@ h1 {
     cursor: pointer;
     width: 150px;
     display: inherit;
-    overflow: hidden;
+
     height: 50px;
 }
 
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: #f9007b;
-            color: #000;
-        }
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #f9007b;
+    color: #000;
+}
 
 .dropdown {
     position: relative;
-    overflow: hidden;
     width: 150px;
     height:50px;
     margin-top:-15px;
 }
+.dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #000;
+    min-width: 160px;
+    overflow: auto;
+    z-index: 1;
+    border: 1px solid #f9007b;
+ }
 
-    .dropdown-content {
-        margin-top: 10px;
-        display: none;
-        position: absolute;
-        background-color: #000;
-        min-width: 160px;
-        overflow: auto;
-        z-index: 1;
-        border: 1px solid #f9007b;
-    }
+ .dropdown-content a {
+   text-transform: uppercase;
+    color: #f9007b;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+}
 
-        .dropdown-content a {
-            text-transform: uppercase;
-            color: #f9007b;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
+.dropdown a:hover {
+   background-color: #f9007b;
+   color: #000;
+}
 
-    .dropdown a:hover {
-        background-color: #f9007b;
-        color: #000;
-    }
-
-    .show {
-        display: block;
-    }
+.show {
+   display: block;
+}
 
 /*--------------------------------------------------------------
 # Header BTM
@@ -847,13 +726,18 @@ h1 {
 /*--------------------------------------------------------------
 # ABOUT
 --------------------------------------------------------------*/
-.about-text{
-    width:540px;
 
+
+.scroll-area {
+    margin-top: 25px;
+    margin-bottom: 55px;
+    font-weight: 600;
 }
 
-
-
+    .scroll-area i {
+        font-size: 20px;
+        margin-right: 22px;
+    }
 
 
 /*--------------------------------------------------------------
@@ -916,6 +800,17 @@ h1 {
         padding-top: 2%;
      font-size:0.6em;
     }
+}
+@media (max-width: 400px) {
+    .solutions-hover {
+        padding-left: 0%;
+        font-size: 25px;
+    }
+
+        .solutions-hover i {
+            padding-top: 2%;
+            font-size: 0.6em;
+        }
 }
 
 
