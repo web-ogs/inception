@@ -390,7 +390,7 @@ h1 {
         line-height: 45px;
     }
     #hero {
-        height: 400px;
+        height: 350px;
     }
 }
 @media (max-width: 400px) {
@@ -449,7 +449,7 @@ h1 {
 
     #header-top i {
         font-size: 18px;
-        margin-right: 10px;
+        margin-right: 8px;
     }
 
     #header-top .button ul {
@@ -467,7 +467,6 @@ h1 {
         border: 1px solid #f9007b;
         cursor: pointer;
     }
-
 
 .dropbtn { 
     text-transform: uppercase;
@@ -773,7 +772,6 @@ h1 {
     border-bottom: #f9007b solid 0.5px;
     position: relative;
 }
-
     .solutions-hover i {
         float: right;
         padding-top: 1%;
@@ -783,7 +781,6 @@ h1 {
         top: 20%;
         position: absolute;
     }
-
         .solutions-hover:hover {
             background-color: #f9007b;
         }
@@ -791,12 +788,10 @@ h1 {
 
 @media (max-width: 600px) {
     .solutions-hover {
-
         padding-left: 0%;
-
+        font-size: 30px;
     }
-    .solutions-hover i {
-       
+    .solutions-hover i {      
         padding-top: 2%;
      font-size:0.6em;
     }
@@ -806,7 +801,6 @@ h1 {
         padding-left: 0%;
         font-size: 25px;
     }
-
         .solutions-hover i {
             padding-top: 2%;
             font-size: 0.6em;
