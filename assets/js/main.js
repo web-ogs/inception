@@ -14,7 +14,8 @@ var Messenger = function (el) {
         m.fadeBuffer = false;
         m.messages = [
             'Loading...',
-            'Ready_'
+            'Ready_',
+            '_'
         ];
 
         setTimeout(m.animateIn, 10);
@@ -304,9 +305,9 @@ window.onclick = function (event) {
 /** HERO TEXT ANIMATION */
 $(window).scroll(function () {
     var a = $(window).scrollTop();
-    var b = "translateX(" + a * 0.35 + "px)";
-    var c = "translateX(" + -a * 0.25 + "px)";
-    var d = "translateX(" + a * 0.25 + "px)";
+    var b = "translateX(" + a * 0.22 + "px)";
+    var c = "translateX(" + -a * 0.11 + "px)";
+    var d = "translateX(" + a * 0.11 + "px)";
 
     $('.hero-text-1').css({
         transform: b
