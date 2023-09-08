@@ -18,7 +18,7 @@ var Messenger = function (el) {
             '_'
         ];
 
-        setTimeout(m.animateIn, 10);
+        setTimeout(m.animateIn, 2);
     };
 
     m.generateRandomString = function (length) {
@@ -40,9 +40,9 @@ var Messenger = function (el) {
             var message = m.generateRandomString(m.current_length);
             $(el).html(message);
 
-            setTimeout(m.animateIn, 20);
+            setTimeout(m.animateIn, 10);
         } else {
-            setTimeout(m.animateFadeBuffer, 20);
+            setTimeout(m.animateFadeBuffer, 10);
         }
     };
 
@@ -73,7 +73,7 @@ var Messenger = function (el) {
         if (do_cycles === true) {
             setTimeout(m.animateFadeBuffer, 50);
         } else {
-            setTimeout(m.cycleText, 2000);
+            setTimeout(m.cycleText, 1580);
         }
     };
 
@@ -87,7 +87,7 @@ var Messenger = function (el) {
         m.fadeBuffer = false;
         $(el).html('');
 
-        setTimeout(m.animateIn, 200);
+        setTimeout(m.animateIn, 100);
     };
 
     m.init();
@@ -467,7 +467,7 @@ window.addEventListener('load', navbarlinksActive)
             setTimeout(() => {
                 preloader.remove(),
                 document.body.style.overflow = ''
-            }, 5000);
+            }, 5750);
         });
     }
 

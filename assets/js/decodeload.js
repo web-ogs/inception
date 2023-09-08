@@ -9,9 +9,9 @@
 
 jQuery.fn.decodeEffect = (function ($) {
     var defaultOptions = {
-        duration: 550,
-        stepsPerGlyph: 6,
-        codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&*()…_+-=;[]/~",
+        duration: 300,
+        stepsPerGlyph: 10,
+        codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$&()_+-=[]/~",
         className: "code"
     };
 
@@ -63,7 +63,7 @@ jQuery.fn.decodeEffect = (function ($) {
 }(jQuery));
 
 var isFirst = true;
-var demora = window.setInterval(pleasedelay, 5500);
+var demora = window.setInterval(pleasedelay, 5900);
 function pleasedelay() {
     if (isFirst) {
         $("#sometext").decodeEffect();
