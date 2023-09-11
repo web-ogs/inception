@@ -14,8 +14,8 @@ var Messenger = function (el) {
         m.fadeBuffer = false;
         m.messages = [
             'Loading...',
-            'Ready_',
-            '_'
+            'Ready',
+            ''
         ];
 
         setTimeout(m.animateIn, 2);
@@ -305,9 +305,9 @@ window.onclick = function (event) {
 /** HERO TEXT ANIMATION */
 $(window).scroll(function () {
     var a = $(window).scrollTop();
-    var b = "translateX(" + a * 0.22 + "px)";
+    var b = "translateX(" + a * 0.12 + "px)";
     var c = "translateX(" + -a * 0.11 + "px)";
-    var d = "translateX(" + a * 0.11 + "px)";
+    var d = "translateX(" + a * 0.2 + "px)";
 
     $('.hero-text-1').css({
         transform: b
@@ -441,6 +441,7 @@ window.addEventListener('load', navbarlinksActive)
     }
 
 
+
     /**
 * Back to top button
 */
@@ -467,7 +468,7 @@ window.addEventListener('load', navbarlinksActive)
             setTimeout(() => {
                 preloader.remove(),
                 document.body.style.overflow = ''
-            }, 5750);
+            }, 5900);
         });
     }
 

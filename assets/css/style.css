@@ -155,6 +155,10 @@ hr.dashed {
     }
 
 
+.target-element {
+    scroll-margin-top: 50px;
+}
+
     /*--------------------------------------------------------------
 # Vanta Canvas
 --------------------------------------------------------------*/
@@ -232,8 +236,6 @@ hr.dashed {
 
 
 
-
-
 @keyframes loading-wipe-out-right {
     0% {
         opacity: 0.8;
@@ -243,6 +245,23 @@ hr.dashed {
     100% {
         opacity: 1;
         clip-path: inset(0 0 0 0);
+    }
+}
+
+.blink {
+    animation: blink-animation 0.85s steps(5, start) infinite;
+    -webkit-animation: blink-animation 0.85s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
     }
 }
 
@@ -267,24 +286,6 @@ main {
     }
 }
 
-header {
-    animation-name: fadeIn;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-    animation-delay: 6s;
-}
-@keyframes fadeIn {
-    0% {
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
-
-
-
 
 @keyframes wipe-out-right {
     from {
@@ -296,8 +297,8 @@ header {
     }
 }
 .--wipe-preloader-custom {
-    --transition__duration: 1.5s;
-    --transition__delay: 5.3s;
+    --transition__duration: 2s;
+    --transition__delay: 5.4s;
     --transition__easing: ease-out;
     animation-name: wipe-out-right;
   
@@ -362,12 +363,12 @@ header {
 # HERO
 --------------------------------------------------------------*/
 #hero {
- 
     width: 98%;
     height: 600px;
     top: 50%;
     margin: auto;
     vertical-align: middle;
+    overflow-x: hidden;
 }
 
 .hero-main {
@@ -376,6 +377,7 @@ header {
     /* spacing */
     padding-top: 0%;
     padding-bottom: 2%;
+    overflow-x: hidden;
 }
 
 .hero-text-1 {
@@ -388,7 +390,7 @@ header {
     white-space: nowrap;
 }
 .hero-text-3 {
-    margin-left: 5%;
+
     overflow: hidden;
     white-space: nowrap;
 }
@@ -407,7 +409,7 @@ header {
 }
 
 #hero h1 {
-    font-size: 8vw;
+    font-size: 7.5vw;
     margin-bottom:-2%;
 }
 
