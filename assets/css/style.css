@@ -95,12 +95,15 @@ h6 {
 }
 
 .section-title {
-    text-align:left;
-    width: 170px;
+    text-align: left;
+    width:12rem;
+    height: 30px;
     color: #000;
     background-color: #f9007b;
     padding-left: 5%;
-    margin-bottom:25px;
+    padding-right: 5%;
+    margin-bottom: 25px;
+    overflow: hidden;
 }
 
 hr.dashed {
@@ -227,8 +230,8 @@ hr.dashed {
         width: 1%;
         background: #f9007b;
     }
-
-    100% {
+ 
+        100% {
         width: 100%;
         background: #f9007b;    
     }
@@ -267,7 +270,7 @@ hr.dashed {
     }
 }
 .--wipe-preloader-custom {
-    --transition__duration: 1.8s;
+    --transition__duration: 1.5s;
     --transition__delay: 5s;
     --transition__easing: ease-out;
     animation-name: wipe-out-right;
@@ -446,7 +449,7 @@ hr.dashed {
 @media (max-width: 700px) {
 
     #hero {
-        height: 350px;
+        height: 390px;
     }
 }
 @media (max-width: 400px) {

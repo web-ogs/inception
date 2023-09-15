@@ -371,6 +371,141 @@ $(window).on('scroll', function () {
 
 
 
+
+
+let triggered1 = false;
+$(window).on('scroll', function () {
+    if (window.scrollY > ($('#solutions').offset().top + $('#solutions').outerHeight() - window.innerHeight) & !triggered1) {
+
+        jQuery.fn.decodeEffect1 = (function ($) {
+            var defaultOptions = {
+                duration: 800,
+                stepsPerGlyph: 6,
+                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
+                className: "code"
+            };
+
+            // get a random string from the given set,
+            // or from the 33 - 125 ASCII range
+            function randomString(set, length) {
+                var string = "", i, glyph;
+                for (i = 0; i < length; i++) {
+                    glyph = Math.random() * set.length;
+                    string += set[glyph | 0];
+                }
+                return string;
+            }
+
+            // this function starts the animation. Basically a closure
+            // over the relevant vars. It creates a new separate span
+            // for the code text, and a stepper function that performs
+            // the animation itself
+            function animate(element, options) {
+                var text = element.text(),
+                    span = $("<span/>").addClass(options.className).insertAfter(element),
+                    interval = options.duration / (text.length * options.stepsPerGlyph),
+                    step = 0,
+                    length = 0,
+                    stepper = function () {
+                        if (++step % options.stepsPerGlyph === 0) {
+                            length++;
+                            element.text(text.slice(0, length));
+                        }
+                        if (length <= text.length) {
+                            span.text(randomString(options.codeGlyphs, text.length - length));
+                            setTimeout(stepper, interval);
+                        } else {
+                            span.remove();
+                        }
+                    };
+                element.text("");
+                stepper();
+            }
+
+            // Basic jQuery plugin pattern
+            return function (options) {
+                options = $.extend({}, defaultOptions, (options || {}));
+                return this.each(function () {
+                    animate($(this), options);
+                });
+            };
+        }(jQuery));
+
+        $("#scrollcode1").decodeEffect1();
+
+
+        triggered1 = true;
+    }
+});
+
+
+
+let triggered2 = false;
+$(window).on('scroll', function () {
+    if (window.scrollY > ($('#contact').offset().top + $('#contact').outerHeight() - window.innerHeight) & !triggered2) {
+
+        jQuery.fn.decodeEffect2 = (function ($) {
+            var defaultOptions = {
+                duration: 800,
+                stepsPerGlyph: 6,
+                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
+                className: "code"
+            };
+
+            // get a random string from the given set,
+            // or from the 33 - 125 ASCII range
+            function randomString(set, length) {
+                var string = "", i, glyph;
+                for (i = 0; i < length; i++) {
+                    glyph = Math.random() * set.length;
+                    string += set[glyph | 0];
+                }
+                return string;
+            }
+
+            // this function starts the animation. Basically a closure
+            // over the relevant vars. It creates a new separate span
+            // for the code text, and a stepper function that performs
+            // the animation itself
+            function animate(element, options) {
+                var text = element.text(),
+                    span = $("<span/>").addClass(options.className).insertAfter(element),
+                    interval = options.duration / (text.length * options.stepsPerGlyph),
+                    step = 0,
+                    length = 0,
+                    stepper = function () {
+                        if (++step % options.stepsPerGlyph === 0) {
+                            length++;
+                            element.text(text.slice(0, length));
+                        }
+                        if (length <= text.length) {
+                            span.text(randomString(options.codeGlyphs, text.length - length));
+                            setTimeout(stepper, interval);
+                        } else {
+                            span.remove();
+                        }
+                    };
+                element.text("");
+                stepper();
+            }
+
+            // Basic jQuery plugin pattern
+            return function (options) {
+                options = $.extend({}, defaultOptions, (options || {}));
+                return this.each(function () {
+                    animate($(this), options);
+                });
+            };
+        }(jQuery));
+
+        $("#scrollcode2").decodeEffect2();
+
+
+        triggered2 = true;
+    }
+});
+
+
 /** HERO TEXT ANIMATION */
 $(window).scroll(function () {
     var a = $(window).scrollTop();
