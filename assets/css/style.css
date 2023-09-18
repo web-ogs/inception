@@ -399,71 +399,63 @@ hr.dashed {
     vertical-align: middle;
     overflow: hidden;
 }
-
-.hero-main {
-    margin: auto;
-    vertical-align: middle;
-    /* spacing */
-    padding-top: 0%;
-    padding-bottom: 2%;
-    overflow: hidden;
-}
-
-.hero-text-1 {
-    text-align:left;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.hero-text-2 {
-    padding-left: 15%;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.hero-text-3 {
-
-    overflow: hidden;
-    white-space: nowrap;
-}
-.code {
-    text-align: left;
-  
-}
-
-#sometext {
-  
-}
-#sometext1 {
-    overflow: hidden;
-}
-#sometext2 {
-    overflow: hidden;
-}
-
-#hero h1 {
-    font-size: 7.5vw;
-    margin-bottom:-2%;
-}
-
-
-
 @media (max-width: 700px) {
-
     #hero {
         height: 390px;
     }
 }
 @media (max-width: 400px) {
-
     #hero {
         height: 280px;
     }
 }
 @media (max-width: 200px) {
-
     #hero {
         height: 230px;
     }
 }
+
+
+.hero-main {
+    margin: auto;
+    vertical-align: middle;
+    /* spacing */
+  
+    padding-bottom: 2%;
+    overflow: hidden;
+}
+#hero h1 {
+    /* font-size: 7.5vw;*/
+    font-size:7.2vw;
+
+}
+.hero-text-1 {
+    padding-left: 2%;
+    width: 100vw;
+    height: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom:-2%;
+}
+.hero-text-2 {
+    padding-left: 23%;
+    width: 100vw;
+    height: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: -2%;
+}
+.hero-text-3 {
+    width: 100vw;
+    height: 40%;
+    padding-left: 10%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+
 
 
 

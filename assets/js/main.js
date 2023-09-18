@@ -109,6 +109,76 @@ function refreshTime() {
 setInterval(refreshTime, 100);
 
 
+/** HEADING DECODE */
+
+var isFirst2 = true;
+var demora = window.setInterval(pleasedelay2, 6800);
+function pleasedelay2() {
+    if (isFirst2) {
+        jQuery.fn.headingDecodeEffect = (function ($) {
+            var defaultOptions = {
+                duration: 150,
+                stepsPerGlyph: 10,
+                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
+               
+            };
+
+            // get a random string from the given set,
+            // or from the 33 - 125 ASCII range
+            function randomString(set, length) {
+                var string = "", i, glyph;
+                for (i = 0; i < length; i++) {
+                    glyph = Math.random() * set.length;
+                    string += set[glyph | 0];
+                }
+                return string;
+            }
+
+            // this function starts the animation. Basically a closure
+            // over the relevant vars. It creates a new separate span
+            // for the code text, and a stepper function that performs
+            // the animation itself
+            function animate(element, options) {
+                var text = element.text(),
+                    span = $("<span/>").addClass(options.className).insertAfter(element),
+                    interval = options.duration / (text.length * options.stepsPerGlyph),
+                    step = 0,
+                    length = 0,
+                    stepper = function () {
+                        if (++step % options.stepsPerGlyph === 0) {
+                            length++;
+                            element.text(text.slice(0, length));
+                        }
+                        if (length <= text.length) {
+                            span.text(randomString(options.codeGlyphs, text.length - length));
+                            setTimeout(stepper, interval);
+                        } else {
+                            span.remove();
+                        }
+                    };
+                element.text("");
+                stepper();
+            }
+
+            // Basic jQuery plugin pattern
+            return function (options) {
+                options = $.extend({}, defaultOptions, (options || {}));
+                return this.each(function () {
+                    animate($(this), options);
+                });
+            };
+        }(jQuery));
+
+        $("#headingDecode1").headingDecodeEffect();
+        $("#headingDecode2").headingDecodeEffect();
+        $("#headingDecode3").headingDecodeEffect();
+
+        isFirst2 = false;
+    }
+}
+
+
+
 /** CODEDTEXT HOVER */
 document.querySelectorAll('.codedText').forEach((t) => {
     const arr1 = t.innerHTML.split('')
@@ -119,19 +189,19 @@ document.querySelectorAll('.codedText').forEach((t) => {
         let step = 0
         tl.fromTo(t, {
             innerHTML: arr2.join(''),
-          
-            
+
+
         }, {
             duration: arr1.length / 20, //duration based on text length
             ease: 'power1.in',
             delay: 0.1,
-        
-           
+
+
             onUpdate: () => {
                 const p = Math.floor(tl.progress() * (arr1.length)) //whole number from 0 - text length
                 if (step != p) { //throttle the change of random characters
                     step = p
-                    arr1.forEach((char, i) => arr2[i] = randChar())
+                    arr1.forEach((char, i) => arr2[i] = randChar2())
                     let pt1 = arr1.join('').substring(p, 0),
                         pt2 = arr2.join('').substring(arr2.length - p, 0)
                     if (t.classList.contains('fromRight')) {
@@ -146,12 +216,11 @@ document.querySelectorAll('.codedText').forEach((t) => {
     }
 })
 
-function randChar() {
-    let c = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&*()…æ_+-=;[]/~`"
-    c = c[Math.floor(Math.random() * c.length)]
-    return (Math.random() > 0.5) ? c : c.toUpperCase()
+function randChar2() {
+    let c2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$^&*()…æ_+-=;[]/~`"
+    c2 = c2[Math.floor(Math.random() * c2.length)]
+    return (Math.random() > 0.5) ? c2 : c2.toUpperCase()
 }
-
 
 
 /** CODEDTEXT HOVER */
@@ -582,29 +651,6 @@ const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
 }
 
-
-    /** LINK STATES ON SCROLL */
-    /**
-let section = document.querySelectorAll('section');
-let menu = document.querySelectorAll('header nav a');
-window.onscroll = () => {
-    section.forEach(i => {
-        let top = window.scrollY;
-        let offset = i.offsetTop - 350;
-        let height = i.offsetHeight;
-        let id = i.getAttribute('id');
-        if (top >= offset && top < offset + height) {
-            menu.forEach(link => {
-                link.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']')
-                    .classList.add('active');
-            });
-        }
-    });
-};
-window.addEventListener('load', navbarlinksActive)
-    onscroll(document, navbarlinksActive)
-        * /
 
 
     /**
