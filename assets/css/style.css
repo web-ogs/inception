@@ -270,7 +270,7 @@ hr.dashed {
     }
 }
 .--wipe-preloader-custom {
-    --transition__duration: 1.5s;
+    --transition__duration: 1s;
     --transition__delay: 5s;
     --transition__easing: ease-out;
     animation-name: wipe-out-right;
@@ -290,15 +290,15 @@ hr.dashed {
 }
 
 .--wipe-main-custom {
-    --transition__duration: 0.7s;
-    --transition__delay: 5.7s;
+    --transition__duration: 0.6s;
+    --transition__delay: 5.8s;
     --transition__easing: ease-out;
     animation-name: wipe-in-right;
     animation-fill-mode: both;
 }
 
 #header-top {
-    animation: slide-in 2s;
+    animation: slide-in 1.5s;
     animation-delay: 5.7s;
 }
 
@@ -401,17 +401,17 @@ hr.dashed {
 }
 @media (max-width: 700px) {
     #hero {
-        height: 390px;
+        height: 300px;
     }
 }
 @media (max-width: 400px) {
     #hero {
-        height: 280px;
+        height: 250px;
     }
 }
 @media (max-width: 200px) {
     #hero {
-        height: 230px;
+        height: 210px;
     }
 }
 
@@ -430,7 +430,6 @@ hr.dashed {
 
 }
 .hero-text-1 {
-    padding-left: 2%;
     width: 100vw;
     height: 40%;
     overflow: hidden;
@@ -438,7 +437,7 @@ hr.dashed {
     margin-bottom:-2%;
 }
 .hero-text-2 {
-    padding-left: 23%;
+    padding-left: 21%;
     width: 100vw;
     height: 40%;
     overflow: hidden;
@@ -448,7 +447,7 @@ hr.dashed {
 .hero-text-3 {
     width: 100vw;
     height: 40%;
-    padding-left: 10%;
+    padding-left: 8%;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -777,7 +776,7 @@ hr.dashed {
 }
 .scroll-area {
     margin-top: 25px;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
     font-weight: 600;
 }
 

@@ -112,7 +112,7 @@ setInterval(refreshTime, 100);
 /** HEADING DECODE */
 
 var isFirst2 = true;
-var demora = window.setInterval(pleasedelay2, 6800);
+var demora = window.setInterval(pleasedelay2, 6700);
 function pleasedelay2() {
     if (isFirst2) {
         jQuery.fn.headingDecodeEffect = (function ($) {
@@ -718,7 +718,7 @@ const onscroll = (el, listener) => {
             setTimeout(() => {
                 preloader.remove(),
                 document.body.style.overflow = ''
-            }, 5700);
+            }, 5500);
         });
     }
 
