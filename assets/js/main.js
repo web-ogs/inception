@@ -1,5 +1,5 @@
 /**
-* Updated: 16 Aug 2023
+* Updated: 6 Oct 2023
 * Author: web-OGs
 */
 
@@ -767,8 +767,14 @@ const onscroll = (el, listener) => {
         });
     }
 
-
-
+/**
+     * page refresh
+     */
+    window.onload = function () {
+        setTimeout(function() {
+            document.getElementById("body").style.display = "";        
+        }, 500);
+    }
 
 
     /**
