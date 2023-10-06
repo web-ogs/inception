@@ -3,6 +3,8 @@
 * Author: web-OGs
 */
 
+
+//LOADING DECODE START
 var Messenger = function (el) {
     'use strict';
     var m = this;
@@ -95,34 +97,33 @@ var Messenger = function (el) {
 
 console.clear();
 var messenger = new Messenger($('#messenger'));
-
-
+//LOADING DECODE END
 
 
 /** TIME DISPLAY */
 `use strict`;
 function refreshTime() {
     var datetime = new Date().toLocaleTimeString();
-    console.log(datetime); // it will represent date in the console of developers tool
+    //console.log(datetime); // it will represent date in the console of developers tool
     document.getElementById("time").textContent = datetime; // represent on html page
 }
 setInterval(refreshTime, 100);
-
+//TIME END
 
 /** HEADING DECODE */
-
+var w = document.documentElement.clientWidth || window.innerWidth;
+if (w >= 900) {
+// Probably desktop
 var isFirst2 = true;
-var demora = window.setInterval(pleasedelay2, 6700);
+var demora = window.setInterval(pleasedelay2, 6600);
 function pleasedelay2() {
     if (isFirst2) {
-        jQuery.fn.headingDecodeEffect = (function ($) {
+         jQuery.fn.headingDecodeEffect = (function ($) {
             var defaultOptions = {
-                duration: 10,
-                stepsPerGlyph: 15,
-                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
-               
+                duration: 100,
+                stepsPerGlyph: 8,
+                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",               
             };
-
             // get a random string from the given set,
             // or from the 33 - 125 ASCII range
             function randomString(set, length) {
@@ -133,7 +134,6 @@ function pleasedelay2() {
                 }
                 return string;
             }
-
             // this function starts the animation. Basically a closure
             // over the relevant vars. It creates a new separate span
             // for the code text, and a stepper function that performs
@@ -177,9 +177,11 @@ function pleasedelay2() {
     }
 }
 
+} 
+//HEADING DECODE END
 
 
-/** CODEDTEXT HOVER */
+/**SOLUTIONS CODEDTEXT HOVER */
 document.querySelectorAll('.codedText').forEach((t) => {
     const arr1 = t.innerHTML.split('')
     const arr2 = []
@@ -192,9 +194,9 @@ document.querySelectorAll('.codedText').forEach((t) => {
 
 
         }, {
-            duration: arr1.length / 37, //duration based on text length
+            duration: arr1.length / 34, //duration based on text length
             ease: 'power1.in',
-            delay: 0.01,
+            delay: 0.02,
 
 
             onUpdate: () => {
@@ -221,9 +223,9 @@ function randChar2() {
     c2 = c2[Math.floor(Math.random() * c2.length)]
     return (Math.random() > 0.5) ? c2 : c2.toUpperCase()
 }
+//SOLUTIONS DECODE END
 
-
-/** CODEDTEXT HOVER */
+/**TEXT CODEDTEXT HOVER */
 document.querySelectorAll('.contact-codedText').forEach((t) => {
     const arr1 = t.innerHTML.split('')
     const arr2 = []
@@ -236,9 +238,9 @@ document.querySelectorAll('.contact-codedText').forEach((t) => {
 
 
         }, {
-            duration: arr1.length / 36, //duration based on text length
+            duration: arr1.length / 34, //duration based on text length
             ease: 'power1.in',
-            delay: 0.02,
+            delay: 0.05,
 
 
             onUpdate: () => {
@@ -265,9 +267,9 @@ function randChar() {
     c = c[Math.floor(Math.random() * c.length)]
     return (Math.random() > 0.5) ? c : c.toUpperCase()
 }
+//TEXT HOVER DECODE END
 
-
-/** CODEDTEXT HOVER */
+/** BUTTON CODEDTEXT HOVER */
 document.querySelectorAll('.button-codedText').forEach((t) => {
     const arr1 = t.innerHTML.split('')
     const arr2 = []
@@ -311,6 +313,10 @@ function randChar() {
     c = c[Math.floor(Math.random() * c.length)]
     return (Math.random() > 0.5) ? c : c.toUpperCase()
 }
+//BUTTON HOVER DECODE END
+
+
+
 
 
 /** MODAL CLICK */
@@ -392,6 +398,7 @@ window.onclick = function (event) {
         modal3.style.display = "none";
     }
 }
+// MODALS END
 
 /** DROPDOWN SOCIALS CLICK */
 /* When the user clicks on the button, 
@@ -413,257 +420,14 @@ window.onclick = function (event) {
         }
     }
 };
-
-
-
-
-
-let triggered = false;
-$(window).on('scroll', function () {
-    if (window.scrollY > ($('#about').offset().top + $('#about').outerHeight() - window.innerHeight) & !triggered) {
-
-        jQuery.fn.decodeEffect = (function ($) {
-            var defaultOptions = {
-                duration: 100,
-                stepsPerGlyph: 18,
-                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
-                className: "code"
-            };
-
-            // get a random string from the given set,
-            // or from the 33 - 125 ASCII range
-            function randomString(set, length) {
-                var string = "", i, glyph;
-                for (i = 0; i < length; i++) {
-                    glyph = Math.random() * set.length;
-                    string += set[glyph | 0];
-                }
-                return string;
-            }
-
-            // this function starts the animation. Basically a closure
-            // over the relevant vars. It creates a new separate span
-            // for the code text, and a stepper function that performs
-            // the animation itself
-            function animate(element, options) {
-                var text = element.text(),
-                    span = $("<span/>").addClass(options.className).insertAfter(element),
-                    interval = options.duration / (text.length * options.stepsPerGlyph),
-                    step = 0,
-                    length = 0,
-                    stepper = function () {
-                        if (++step % options.stepsPerGlyph === 0) {
-                            length++;
-                            element.text(text.slice(0, length));
-                        }
-                        if (length <= text.length) {
-                            span.text(randomString(options.codeGlyphs, text.length - length));
-                            setTimeout(stepper, interval);
-                        } else {
-                            span.remove();
-                        }
-                    };
-                element.text("");
-                stepper();
-            }
-
-            // Basic jQuery plugin pattern
-            return function (options) {
-                options = $.extend({}, defaultOptions, (options || {}));
-                return this.each(function () {
-                    animate($(this), options);
-                });
-            };
-        }(jQuery));
-
-        $("#scrollcode").decodeEffect();
-
-
-        triggered = true;
-    }
-});
-
-
-
-
-
-let triggered1 = false;
-$(window).on('scroll', function () {
-    if (window.scrollY > ($('#solutions').offset().top + $('#solutions').outerHeight() - window.innerHeight) & !triggered1) {
-
-        jQuery.fn.decodeEffect1 = (function ($) {
-            var defaultOptions = {
-                duration: 100,
-                stepsPerGlyph: 18,
-                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
-                className: "code"
-            };
-
-            // get a random string from the given set,
-            // or from the 33 - 125 ASCII range
-            function randomString(set, length) {
-                var string = "", i, glyph;
-                for (i = 0; i < length; i++) {
-                    glyph = Math.random() * set.length;
-                    string += set[glyph | 0];
-                }
-                return string;
-            }
-
-            // this function starts the animation. Basically a closure
-            // over the relevant vars. It creates a new separate span
-            // for the code text, and a stepper function that performs
-            // the animation itself
-            function animate(element, options) {
-                var text = element.text(),
-                    span = $("<span/>").addClass(options.className).insertAfter(element),
-                    interval = options.duration / (text.length * options.stepsPerGlyph),
-                    step = 0,
-                    length = 0,
-                    stepper = function () {
-                        if (++step % options.stepsPerGlyph === 0) {
-                            length++;
-                            element.text(text.slice(0, length));
-                        }
-                        if (length <= text.length) {
-                            span.text(randomString(options.codeGlyphs, text.length - length));
-                            setTimeout(stepper, interval);
-                        } else {
-                            span.remove();
-                        }
-                    };
-                element.text("");
-                stepper();
-            }
-
-            // Basic jQuery plugin pattern
-            return function (options) {
-                options = $.extend({}, defaultOptions, (options || {}));
-                return this.each(function () {
-                    animate($(this), options);
-                });
-            };
-        }(jQuery));
-
-        $("#scrollcode1").decodeEffect1();
-
-
-        triggered1 = true;
-    }
-});
-
-
-
-let triggered2 = false;
-$(window).on('scroll', function () {
-    if (window.scrollY > ($('#contact').offset().top + $('#contact').outerHeight() - window.innerHeight) & !triggered2) {
-
-        jQuery.fn.decodeEffect2 = (function ($) {
-            var defaultOptions = {
-                duration: 100,
-                stepsPerGlyph: 18,
-                codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",
-                className: "code"
-            };
-
-            // get a random string from the given set,
-            // or from the 33 - 125 ASCII range
-            function randomString(set, length) {
-                var string = "", i, glyph;
-                for (i = 0; i < length; i++) {
-                    glyph = Math.random() * set.length;
-                    string += set[glyph | 0];
-                }
-                return string;
-            }
-
-            // this function starts the animation. Basically a closure
-            // over the relevant vars. It creates a new separate span
-            // for the code text, and a stepper function that performs
-            // the animation itself
-            function animate(element, options) {
-                var text = element.text(),
-                    span = $("<span/>").addClass(options.className).insertAfter(element),
-                    interval = options.duration / (text.length * options.stepsPerGlyph),
-                    step = 0,
-                    length = 0,
-                    stepper = function () {
-                        if (++step % options.stepsPerGlyph === 0) {
-                            length++;
-                            element.text(text.slice(0, length));
-                        }
-                        if (length <= text.length) {
-                            span.text(randomString(options.codeGlyphs, text.length - length));
-                            setTimeout(stepper, interval);
-                        } else {
-                            span.remove();
-                        }
-                    };
-                element.text("");
-                stepper();
-            }
-
-            // Basic jQuery plugin pattern
-            return function (options) {
-                options = $.extend({}, defaultOptions, (options || {}));
-                return this.each(function () {
-                    animate($(this), options);
-                });
-            };
-        }(jQuery));
-
-        $("#scrollcode2").decodeEffect2();
-
-
-        triggered2 = true;
-    }
-});
-
-
-/** HERO TEXT ANIMATION */
-$(window).scroll(function () {
-    var a = $(window).scrollTop();
-    var b = "translateX(" + a * 0.12 + "px)";
-    var c = "translateX(" + -a * 0.11 + "px)";
-    var d = "translateX(" + a * 0.2 + "px)";
-
-    $('.hero-text-1').css({
-        transform: b
-    });
-    $('.hero-text-2').css({
-        transform: c
-    });
-    $('.hero-text-3').css({
-        transform: d
-    })
-});
-
-
-/** SQAURE ANIMATION */
-$(window).scroll(function () {
-    var w = $(window).scrollTop();
-
-    var f = "translateX(" + w * 0.12 + "px)";
-    var f1 = "translateX(" + w * 0.30 + "px)";
-
-    $('.box.three').css({
-        transform: f
-    });
-    $('.box1.three1').css({
-        transform: f1
-    }) 
-
-});
+// DROPDOWN END
 
 
 
 
 /** PAGE LOAD */
-
 (function () {
     "use strict";
-
-
 
 /**
 * Easy selector helper function
@@ -759,23 +523,19 @@ const onscroll = (el, listener) => {
     let preloader = select('#preloader-page');
     if (preloader) {
         window.addEventListener('load', () => {
-            document.body.style.overflow = 'hidden'
+            $("#page").hide() // hide page
+            document.body.style.overflow = 'hidden',
+            
+
             setTimeout(() => {
                 preloader.remove(),
-                document.body.style.overflow = ''
-            }, 5500);
+                $("#page").show(), // show page
+                document.body.style.overflow = ''               
+            }, 5850);
         });
     }
 
 /**
-     * page refresh
-     */
-    window.onload = function () {
-        setTimeout(function() {
-            document.getElementById("body").style.display = "";        
-        }, 500);
-    }
-
 
     /**
      * Scroll with ofset on page load with hash links in the url
@@ -787,6 +547,72 @@ const onscroll = (el, listener) => {
             }
         }
     });
+
+ /**
+     * Smooth scroll
+     */
+    $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+      
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+      
+            // Store hash
+            var hash = this.hash;
+      
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+      
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+
+
+
+
+
+      /** HERO TEXT ANIMATION */
+$(window).scroll(function () {
+    var a = $(window).scrollTop();
+    var b = "translateX(" + a * 0.12 + "px)";
+    var c = "translateX(" + -a * 0.11 + "px)";
+    var d = "translateX(" + a * 0.2 + "px)";
+
+    $('.hero-text-1').css({
+        transform: b
+    });
+    $('.hero-text-2').css({
+        transform: c
+    });
+    $('.hero-text-3').css({
+        transform: d
+    })
+});
+/** SQAURE ANIMATION */
+$(window).scroll(function () {
+    var w = $(window).scrollTop();
+
+    var f = "translateX(" + w * 0.12 + "px)";
+    var f1 = "translateX(" + w * 0.30 + "px)";
+
+    $('.box.three').css({
+        transform: f
+    });
+    $('.box1.three1').css({
+        transform: f1
+    }) 
+
+});
+// SCROLL MOVEMENT END
    
 })()
 
