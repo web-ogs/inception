@@ -181,14 +181,14 @@ hr.dashed {
 
     #vanta-canvas {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         position: fixed;
         max-width: 100%;
     }
 
     #blackoverlay {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         background-color: rgba(0,0,0,0.6);
     }
 
@@ -417,15 +417,15 @@ hr.dashed {
 }
 @media (max-width: 900px) {
     #top-line {
-        margin-left: 10px;
-        font-size: 16px;
+        margin-left: 5px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 600px) {
     #top-line {
-        margin-left: 10px;
-        font-size: 14px;
+        margin-left: 5px;
+        font-size: 13px;
     }
 }
 
@@ -434,7 +434,7 @@ hr.dashed {
 # HERO
 --------------------------------------------------------------*/
 #hero {
-    width: 98%;
+    width: 100%;
     height: 550px;
     top: 50%;
     margin: auto;
@@ -468,7 +468,7 @@ hr.dashed {
 }
 #hero h1 {
     /* font-size: 7.5vw;*/
-    font-size:7.2vw;
+    font-size:7.4vw;
 
 }
 .hero-text-1 {
@@ -479,7 +479,7 @@ hr.dashed {
     margin-bottom:-2%;
 }
 .hero-text-2 {
-    padding-left: 21%;
+    padding-left: 23%;
     width: 100vw;
     height: 40%;
     overflow: hidden;
@@ -656,6 +656,8 @@ hr.dashed {
     font-weight: 400;
     letter-spacing: 12px;
     text-transform: uppercase;
+    align-items: middle;
+
 }
 
     #header-btm .logo a {
@@ -664,6 +666,7 @@ hr.dashed {
 
     #header-btm .logo img {
         height: 40px;
+        margin-top:-1px;
     }
 
 .scrolled-offset {
@@ -676,10 +679,17 @@ hr.dashed {
     }
 
     #header-btm .logo img {
-        height: 25px;
+        height: 30px;
+        margin-top:-8px;
     }
 }
+@media (max-width: 600px) {
 
+    #header-btm .logo img {
+        height: 20px;
+        margin-top:-8px;
+    }
+}
 
 
 /*--------------------------------------------------------------
@@ -746,7 +756,7 @@ hr.dashed {
 
 @media (max-width: 400px) {
     .navbar a{
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -818,9 +828,7 @@ hr.dashed {
 # ABOUT
 --------------------------------------------------------------*/
 
-#aboutmain {
-    padding-top: 5%;
-}
+
 .scroll-area {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -836,9 +844,6 @@ hr.dashed {
 /*--------------------------------------------------------------
 # SOLUTIONS
 --------------------------------------------------------------*/
-#solutionsmain {
-    padding-top: 5%;
-}
 
 
 
@@ -1057,10 +1062,6 @@ hr.dashed {
     /*--------------------------------------------------------------
 # CONTACT
 --------------------------------------------------------------*/
-
-#contactmain {
-    padding-top: 5%;
-}
 
 
 .contact-socials{

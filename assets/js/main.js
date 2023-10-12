@@ -114,8 +114,8 @@ setInterval(refreshTime, 100);
 //TIME END
 
 /** HEADING DECODE */
-var w = document.documentElement.clientWidth || window.innerWidth;
-if (w >= 900) {
+//var w = document.documentElement.clientWidth || window.innerWidth;
+//if (w >= 900) {
 // Probably desktop
 var isFirst2 = true;
 var demora = window.setInterval(pleasedelay2, 6550);
@@ -180,7 +180,7 @@ function pleasedelay2() {
     }
 }
 
-} 
+//} 
 //HEADING DECODE END
 
 
