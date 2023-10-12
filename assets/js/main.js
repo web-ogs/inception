@@ -4,6 +4,9 @@
 */
 
 
+
+
+
 //LOADING DECODE START
 var Messenger = function (el) {
     'use strict';
@@ -115,12 +118,12 @@ var w = document.documentElement.clientWidth || window.innerWidth;
 if (w >= 900) {
 // Probably desktop
 var isFirst2 = true;
-var demora = window.setInterval(pleasedelay2, 6600);
+var demora = window.setInterval(pleasedelay2, 6550);
 function pleasedelay2() {
     if (isFirst2) {
          jQuery.fn.headingDecodeEffect = (function ($) {
             var defaultOptions = {
-                duration: 100,
+                duration: 600,
                 stepsPerGlyph: 8,
                 codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",               
             };
@@ -461,7 +464,6 @@ const onscroll = (el, listener) => {
 }
 
 
-
     /**
      * Navbar links active state on scroll
      */
@@ -535,7 +537,40 @@ const onscroll = (el, listener) => {
         });
     }
 
-/**
+
+      /** HERO TEXT ANIMATION */
+      $(window).scroll(function () {
+        var a = $(window).scrollTop();
+        var b = "translateX(" + a * 0.12 + "px)";
+        var c = "translateX(" + -a * 0.11 + "px)";
+        var d = "translateX(" + a * 0.2 + "px)";
+    
+        $('.hero-text-1').css({
+            transform: b
+        });
+        $('.hero-text-2').css({
+            transform: c
+        });
+        $('.hero-text-3').css({
+            transform: d
+        })
+    });
+    /** SQAURE ANIMATION */
+    $(window).scroll(function () {
+        var w = $(window).scrollTop();
+    
+        var f = "translateX(" + w * 0.12 + "px)";
+        var f1 = "translateX(" + w * 0.30 + "px)";
+    
+        $('.box.three').css({
+            transform: f
+        });
+        $('.box1.three1').css({
+            transform: f1
+        }) 
+    
+    });
+    // SCROLL MOVEMENT END
 
     /**
      * Scroll with ofset on page load with hash links in the url
@@ -567,7 +602,7 @@ const onscroll = (el, listener) => {
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
               scrollTop: $(hash).offset().top
-            }, 800, function(){
+            }, 500, function(){
       
               // Add hash (#) to URL when done scrolling (default click behavior)
               window.location.hash = hash;
@@ -580,39 +615,7 @@ const onscroll = (el, listener) => {
 
 
 
-      /** HERO TEXT ANIMATION */
-$(window).scroll(function () {
-    var a = $(window).scrollTop();
-    var b = "translateX(" + a * 0.12 + "px)";
-    var c = "translateX(" + -a * 0.11 + "px)";
-    var d = "translateX(" + a * 0.2 + "px)";
 
-    $('.hero-text-1').css({
-        transform: b
-    });
-    $('.hero-text-2').css({
-        transform: c
-    });
-    $('.hero-text-3').css({
-        transform: d
-    })
-});
-/** SQAURE ANIMATION */
-$(window).scroll(function () {
-    var w = $(window).scrollTop();
-
-    var f = "translateX(" + w * 0.12 + "px)";
-    var f1 = "translateX(" + w * 0.30 + "px)";
-
-    $('.box.three').css({
-        transform: f
-    });
-    $('.box1.three1').css({
-        transform: f1
-    }) 
-
-});
-// SCROLL MOVEMENT END
    
 })()
 

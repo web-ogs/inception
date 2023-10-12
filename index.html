@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 
     <title>INCEPTION</title>
     <meta content="" name="description">
@@ -51,55 +51,59 @@
     <!-- FIXED TOP HEADER START -->
 <div id="page">
     
-        <div id="header-top" class="fixed-top align-items-center">
-            <div class="d-flex align-items-center justify-content-between">
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn button button-codedText left-pad-socials">Socials</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="https://instagram.com/inception.land/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span class="contact-codedText">Instagram</span> </a>
-                        <a href="https://twitter.com/inceptionland42/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i><span class="contact-codedText">Twitter</span></a>
-                    </div>
+
+    <!-- FIXED TOP HEADER END -->
+    <div id="header-top" class="fixed-top align-items-center">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn button button-codedText left-pad-socials">Socials</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="https://instagram.com/inception.land/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span class="contact-codedText">Instagram</span> </a>
+                    <a href="https://twitter.com/inceptionland42/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i><span class="contact-codedText">Twitter</span></a>
                 </div>
-                <a href="#contact-seperator">
-                    
-                 <button class="dropbtn button button-codedText left-pad-hi">SAY HI</button>
-                </a>
             </div>
-        </div>
-    <!-- FIXED BOTTOM NAV HEADER START -->
-    <div id="header-btm" class="fixed-bottom align-items-center">
-        <div class="header-container d-flex align-items-center justify-content-between">
-
-            <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto" href="#">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#solutions-seperator">Solutions</a></li>
-                    <li><a class="nav-link scrollto" href="#contact-seperator">Contact</a></li>
-                </ul>
-
-            </nav>
-
+            <a href="#contact-seperator">
+                
+             <button class="dropbtn button button-codedText left-pad-hi">SAY HI</button>
+            </a>
         </div>
     </div>
-    
-    <!-- FIXED TOP HEADER END -->
-
 
 
     <main transition-style class="--wipe-main-custom">
         <!-- Vanta Container -->
 
-
+      
         <div id="content-wrapper" class="vanta-fixed-container">
             <div id="vanta-canvas">
                 <div id="blackoverlay"></div>
             </div>
-
-
-            <!-- FIXED BOTTOM NAV HEADER END -->
+            
             <!-- HERO SECTION START -->
+            <div id="home">
+
+             
+            <!-- FIXED BOTTOM NAV HEADER START -->
+            <div id="header-btm" class="fixed-bottom align-items-center">
+                <div class="header-container d-flex align-items-center justify-content-between">
+        
+                    <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>
+        
+                    <nav id="navbar" class="navbar">
+                        <ul>
+                            <li><a class="nav-link scrollto active" href="#">Home</a></li>
+                            <li><a class="nav-link scrollto" href="#solutions">Solutions</a></li>
+                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                        </ul>
+        
+                    </nav>
+        
+                </div>
+            </div>
+            
+
+
+
             <section id="top-line" class="card">
                 <div class="pink">
                     <div class="row">
@@ -134,6 +138,7 @@
                 </section>
             </div>
             <!-- HERO SECTION END -->
+       
             <!-- ABOUT SECTION START -->
             <section id="about" class="card">
                 <div class="scroll-area pink">
@@ -143,11 +148,11 @@
                 <div class="">
                     <div class="row">
                         <div class="col col-sm-3">
-                            <div id="aboutscroll" class="section-title">
+                            <div id="aboutscroll" class="section-title" data-aos="flip-up" data-aos-duration="1000">
                                 <h4> <span id="scrollcode"> ABOUT US</span></h4>
                             </div>
                         </div>
-                        <div id="aboutmain" class="col-sm-5" data-aos="slide-left" data-aos-duration="1000" data-aos-once="true">
+                        <div id="aboutmain" class="col-lg-5" data-aos="slide-left" data-aos-duration="1000" data-aos-once="true">
                             <p>Future-crafted by creative technologists. Dive into a hybrid realm where creators & investors vibe, visionaries align, and ideas launch.</p>
                             <p>Founders, partners, dreamers – converge here.</p>
                         </div>
@@ -155,18 +160,26 @@
                     </div>
                 </div>
             </section>
+        </div>
+
+
+  <!-- SOLUTIONS SECTION START -->
+  <section id="solutions" class="card">
+
             <!-- ABOUT SECTION END -->
             <div id="solutions-seperator" class="seperator">
                 <hr class="dashed">
                 <div class="box three"></div>
 
             </div>
-            <!-- SOLUTIONS SECTION START -->
-            <section id="solutions" class="card">
+    
+
+
+          
                 <div class="">
                     <div class="row">
                         <div class="col col-sm-3">
-                            <div class="section-title">
+                            <div class="section-title" data-aos="flip-up" data-aos-duration="1000">
                                 <h4> <span id="scrollcode1">SOLUTIONS</span> </h4>
                             </div>
                         </div>
@@ -285,16 +298,21 @@
                 </div>
             </section>
             <!-- SOLUTIONS SECTION END -->
-            <div id="contact-seperator" class="seperator">
-                <hr class="dashed">
-                <div class="box1 three1"></div>
-            </div>
+          
             <!-- CONTACT SECTION START -->
             <section id="contact" class="card">
+
+                <div id="contact-seperator" class="seperator">
+                    <hr class="dashed">
+                    <div class="box1 three1"></div>
+                </div>
+
+
+
                 <div class="">
                     <div class="row">
                         <div class="col col-sm-3">
-                            <div class="section-title">
+                            <div class="section-title" data-aos="flip-up" data-aos-duration="1000">
                                 <h4> <span id="scrollcode2"> CONTACT US </span></h4>
                             </div>
                         </div>

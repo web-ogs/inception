@@ -110,7 +110,7 @@ h6 {
 }
 
 .section-title {
-    text-align: left;
+    text-align: center;
     align-items: center;
     width:170px;
     height: 25px;
@@ -148,7 +148,8 @@ hr.dashed {
     background: #f9007b;
 }
 .seperator {
-    margin: 3%;
+    margin-top: 3%;
+    margin-bottom: 6%;
     overflow: hidden;
 }
 
@@ -179,13 +180,14 @@ hr.dashed {
 --------------------------------------------------------------*/
 
     #vanta-canvas {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         position: fixed;
+        max-width: 100%;
     }
 
     #blackoverlay {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         background-color: rgba(0,0,0,0.6);
     }
@@ -315,19 +317,22 @@ hr.dashed {
     animation-fill-mode: both;
 }
 
-#header-top {
-    animation: slide-in 1s;
-    animation-delay: 0;
+.--slide-in-custom  {
+    --transition__duration: 1s;
+    animation-name: slide-in;
+    --transition__easing: ease-in-out;
+    animation-fill-mode: both;
 }
 
 
 @keyframes slide-in {
     0% {
         opacity: 0;
+        clip-path: inset(0 100% 0 0);
     }
 
     40% {
-        clip-path: inset(0 100% 0 0);
+      
         opacity: 0;
     }
 
@@ -362,7 +367,7 @@ hr.dashed {
 
 .--hero-anim-in-custom {
     --transition__duration: 1s;
-    --transition__delay: 0.5s;
+    --transition__delay: 0.1s;
     --transition__easing: ease-in-out;
     animation-name: slide-in-right;
 }
@@ -499,7 +504,6 @@ hr.dashed {
 # FIXED TOP HEADER NAV
 --------------------------------------------------------------*/
     #header-top {
-        transition: all 0.5s;
         position:fixed;
         left: 3em;
         right: 3em;
@@ -570,7 +574,7 @@ hr.dashed {
     position: relative;
     width: 150px;
     height:50px;
-    margin-top:-15px;
+    margin-top:-20px;
 }
 .dropdown-content {
     margin-top: 5px;
@@ -687,6 +691,9 @@ hr.dashed {
 .navbar {
     padding: 0;
 }
+.navbar .active{
+    color: #f9007b;
+}
 
     .navbar ul {
         margin: 0;
@@ -737,6 +744,11 @@ hr.dashed {
     }
 }
 
+@media (max-width: 400px) {
+    .navbar a{
+        font-size: 11px;
+    }
+}
 
 
 /**
@@ -1090,9 +1102,7 @@ hr.dashed {
             cursor: pointer;
         }
 
-    #contact {
-        margin-bottom: -35px;
-    }
+ 
 
  
 
@@ -1118,24 +1128,23 @@ hr.dashed {
     #footer .copyright {
         margin-right: 65px;
         text-align: right;
-        color: #f9007b;
-        margin-bottom: 20px;
+        color: #f9007b;   
+        margin-bottom: 65px;
     }
 
-    @media (max-width: 768px) {
-        #footer .card {
-            margin-bottom: -20px;
-        }
-
-        #footer {
-            font-size: 13px;
-        }
-
-            #footer .copyright {
-                margin-right: 58px;
-                margin-bottom: 40px;
-            }
+    @media (max-width: 678px) {   
+        #footer .copyright {
+            margin-right: 25px;
+            margin-bottom: 60px;
+        }    
     }
+    @media (max-width: 600px) {   
+        #footer .copyright {
+            margin-right: 55px;
+            margin-bottom: 90px;
+        }    
+    }
+
 
 
 
