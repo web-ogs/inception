@@ -525,13 +525,13 @@ const onscroll = (el, listener) => {
     let preloader = select('#preloader-page');
     if (preloader) {
         window.addEventListener('load', () => {
-            $("#page").hide() // hide page
+           // $("#page").hide() // hide page
             document.body.style.overflow = 'hidden',
             
 
             setTimeout(() => {
                 preloader.remove(),
-                $("#page").show(), // show page
+                //$("#page").show(), // show page
                 document.body.style.overflow = ''               
             }, 5850);
         });
