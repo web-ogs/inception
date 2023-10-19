@@ -1089,12 +1089,12 @@ hr.dashed {
     cursor: pointer;
 }
 
-#contact h6 {
+#Contact h6 {
     font-size: 22px;
     font-weight: 600;
 }
 
-    #contact button {
+    #Contact button {
         background: none;
         text-transform: uppercase;
         font-size: 20px;
@@ -1108,7 +1108,7 @@ hr.dashed {
         margin-bottom: 65px;
     }
 
-        #contact button:hover {
+        #Contact button:hover {
             font-weight: 500;
             color: #000;
             background-color: #f9007b;
@@ -1121,11 +1121,11 @@ hr.dashed {
  
 
     @media (max-width: 600px) {
-        #contact {
+        #Contact {
             margin-bottom: 10px;
         }
 
-            #contact button {
+            #Contact button {
                 margin-top: 25px;
                 margin-bottom: 35px;
             }
