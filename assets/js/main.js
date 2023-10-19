@@ -118,7 +118,7 @@ setInterval(refreshTime, 100);
 //if (w >= 900) {
 // Probably desktop
 var isFirst2 = true;
-var demora = window.setInterval(pleasedelay2, 6550);
+var demora = window.setInterval(pleasedelay2, 6350);
 function pleasedelay2() {
     if (isFirst2) {
          jQuery.fn.headingDecodeEffect = (function ($) {
