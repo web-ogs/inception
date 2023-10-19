@@ -118,13 +118,13 @@ setInterval(refreshTime, 100);
 //if (w >= 900) {
 // Probably desktop
 var isFirst2 = true;
-var demora = window.setInterval(pleasedelay2, 6100);
+var demora = window.setInterval(pleasedelay2, 6300);
 function pleasedelay2() {
     if (isFirst2) {
          jQuery.fn.headingDecodeEffect = (function ($) {
             var defaultOptions = {
                 duration: 400,
-                stepsPerGlyph: 6,
+                stepsPerGlyph: 4,
                 codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",               
             };
             // get a random string from the given set,
@@ -533,7 +533,7 @@ const onscroll = (el, listener) => {
                 preloader.remove(),
                 //$("#page").show(), // show page
                 document.body.style.overflow = ''               
-            }, 5750);
+            }, 5550);
         });
     }
 
