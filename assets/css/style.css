@@ -181,7 +181,7 @@ hr.dashed {
 
     #vanta-canvas {
         width: 100vw;
-        height: 110%;
+        height: 105%;
         position: fixed;
     }
 
@@ -194,7 +194,6 @@ hr.dashed {
     .vanta-fixed-container {
         position: relative;
         z-index: 0;
-        margin-top:-80px;
     }
 
 
@@ -314,8 +313,8 @@ hr.dashed {
 }
 
 .--wipe-main-custom {
-    --transition__duration: 0.75s;
-    --transition__delay: 6.7s;
+    --transition__duration: 0.65s;
+    --transition__delay: 6.5s;
     --transition__easing: ease-out;
     animation-name: wipe-in-right;
 
@@ -405,7 +404,7 @@ hr.dashed {
 
 
 #top-line {
-    padding-top: 200px;
+    padding-top: 120px;
     width: 100%;
     height: 100px;
     display: block;
@@ -507,7 +506,7 @@ hr.dashed {
 }
 @media (max-width: 600px) {
     .hero-text-2 {
-        padding-left: 22%;  
+        padding-left: 25%;  
     }
 }
 
