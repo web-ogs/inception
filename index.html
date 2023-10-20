@@ -54,6 +54,9 @@
 
       
     <div id="content-wrapper" class="vanta-fixed-container">
+        <div id="no-vanta-canvas-img">
+            <div id="blackoverlay"></div>
+        </div>
         <div id="vanta-canvas">
             <div id="blackoverlay"></div>
         </div>
@@ -390,6 +393,29 @@
             points: 10.00
         })
     </script>
+
+    <script type="text/javascript">
+        
+        function is_touch_enabled() {
+            return ( 'ontouchstart' in window ) || 
+                   ( navigator.maxTouchPoints > 0 ) ||
+                   ( navigator.msMaxTouchPoints > 0 );
+        }
+        
+        var src = "https://write.geeksforgeeks.org/wp-content/uploads/gfg-39.png"; 
+ 
+            if( is_touch_enabled() ) {
+                var img = "<img src=" + src + " height='100'/>";;
+            }
+            else {
+                var img = "";
+            }
+ 
+            document.getElementById('no-vanta-canvas-img').innerHTML = img;
+    </script>
+
+
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 

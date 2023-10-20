@@ -196,6 +196,11 @@ hr.dashed {
         z-index: 0;
     }
 
+    #no-vanta-canvas-img{
+        width: 100vw;
+        height: 105%;
+        position: fixed;
+    }
 
 
 
