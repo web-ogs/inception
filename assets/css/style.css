@@ -195,13 +195,28 @@ hr.dashed {
         position: relative;
         z-index: 0;
     }
-
-    #no-vanta-canvas-img{
-        width: 100vw;
-        height: 105%;
-        position: fixed;
+    #no-vanta-canvas-img {
+        visibility: hidden;
     }
 
+    @media (max-width: 768px) {
+        #vanta-canvas {
+       visibility: hidden;
+        }
+        #no-vanta-canvas-img {
+            visibility: visible;
+            top:0;
+            left:0;
+            width: 100vw;
+            height: 105%;
+            position: fixed;
+            background-image: url("../img/background.png");
+             background-position: center; 
+             background-repeat: no-repeat; 
+             background-size: cover; 
+             }
+
+    }
 
 
 /*--------------------------------------------------------------
