@@ -210,7 +210,7 @@ hr.dashed {
             width: 100vw;
             height: 105%;
             position: fixed;
-            background-image: url("../img/background.png");
+            background-image: url("../img/background.svg");
              background-position: center; 
              background-repeat: no-repeat; 
              background-size: cover; 
