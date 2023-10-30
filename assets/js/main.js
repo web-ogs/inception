@@ -3,10 +3,6 @@
 * Author: web-OGs
 */
 
-
-
-
-
 //LOADING DECODE START
 var Messenger = function (el) {
     'use strict';
@@ -281,16 +277,13 @@ document.querySelectorAll('.button-codedText').forEach((t) => {
         const tl = gsap.timeline()
         let step = 0
         tl.fromTo(t, {
-            innerHTML: arr2.join(''),
-            color:'#000',
-            background:'#f9007b'
+            innerHTML: arr2.join('')
+          
 
         }, {
-            duration: arr1.length / 25, //duration based on text length
+            duration: arr1.length / 29, //duration based on text length
             ease: 'power1.in',
             delay: 0.02,
-            color:'#f9007b',
-            background:'#000',
 
             onUpdate: () => {
                 const p = Math.floor(tl.progress() * (arr1.length)) //whole number from 0 - text length
@@ -514,9 +507,9 @@ const onscroll = (el, listener) => {
 
             setTimeout(() => {
                 preloader.remove(),
-                //$("#page").show(), // show page
+               // $("#page").show(), // show page
                 document.body.style.overflow = ''               
-            }, 5500);
+            }, 5800);
         });
     }
 
@@ -566,14 +559,7 @@ const onscroll = (el, listener) => {
         }
     });
 
-
-
-
-
-
-
-
-   
+  
 })()
 
 
