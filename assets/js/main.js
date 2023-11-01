@@ -3,6 +3,7 @@
 * Author: web-OGs
 */
 
+
 //LOADING DECODE START
 var Messenger = function (el) {
     'use strict';
@@ -114,7 +115,7 @@ setInterval(refreshTime, 100);
 //if (w >= 900) {
 // Probably desktop
 var isFirst2 = true;
-var demora = window.setInterval(pleasedelay2, 6350);
+var demora = window.setInterval(pleasedelay2, 6550);
 function pleasedelay2() {
     if (isFirst2) {
          jQuery.fn.headingDecodeEffect = (function ($) {
@@ -278,12 +279,12 @@ document.querySelectorAll('.button-codedText').forEach((t) => {
         let step = 0
         tl.fromTo(t, {
             innerHTML: arr2.join('')
-          
+     
 
         }, {
-            duration: arr1.length / 29, //duration based on text length
-            ease: 'power1.in',
-            delay: 0.02,
+            duration: arr1.length / 32, //duration based on text length
+         
+         
 
             onUpdate: () => {
                 const p = Math.floor(tl.progress() * (arr1.length)) //whole number from 0 - text length
@@ -462,7 +463,7 @@ const onscroll = (el, listener) => {
      */
     let navbarlinks = select('#navbar .scrollto', true)
     const navbarlinksActive = () => {
-        let position = window.scrollY + 500
+        let position = window.scrollY + 400
         navbarlinks.forEach(navbarlink => {
             if (!navbarlink.hash) return
             let section = select(navbarlink.hash)
@@ -476,6 +477,23 @@ const onscroll = (el, listener) => {
     }
     window.addEventListener('load', navbarlinksActive)
     onscroll(document, navbarlinksActive)
+
+
+
+
+    /**
+ * Scrolls to an element with header offset
+ */
+    const scrollto = (el) => {
+        let header = select('#header-top')
+        let offset = header.offsetHeight
+
+        let elementPos = select(el).offsetTop
+        window.scrollTo({
+            top: elementPos - offset,
+            behavior: 'smooth'
+        })
+    }
 
 
 
@@ -501,15 +519,15 @@ const onscroll = (el, listener) => {
     let preloader = select('#preloader-page');
     if (preloader) {
         window.addEventListener('load', () => {
-           // $("#page").hide() // hide page
+            //$("#page").hide() // hide page
             document.body.style.overflow = 'hidden',
             
 
             setTimeout(() => {
                 preloader.remove(),
-               // $("#page").show(), // show page
+              //  $("#page").show(), // show page
                 document.body.style.overflow = ''               
-            }, 5800);
+            }, 5850);
         });
     }
 
@@ -559,7 +577,8 @@ const onscroll = (el, listener) => {
         }
     });
 
-  
+
+   
 })()
 
 

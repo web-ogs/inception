@@ -47,13 +47,22 @@
             </div>
         </div>
     </div>
-
-    <!-- FIXED TOP HEADER START -->
-<div id="page">
     
+    <div id="page" transition-style class="--wipe-main-custom">
 
-    <!-- FIXED TOP HEADER END -->
-    <div id="header-top" class="fixed-top align-items-center">
+    <div id="content-wrapper" class="vanta-fixed-container">
+        <div id="vanta-canvas">
+            <div id="blackoverlay"></div>
+        </div>
+
+  
+       
+            
+            <!-- HERO SECTION START -->
+            <div id="home">
+
+                    <!-- FIXED TOP HEADER END -->
+    <div id="header-top" class="align-items-center">
         <div class="d-flex align-items-center justify-content-between">
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn button button-codedText left-pad-socials">Socials</button>
@@ -69,22 +78,6 @@
         </div>
     </div>
 
-
-    <main transition-style class="--wipe-main-custom">
-        <!-- Vanta Container -->
-
-      
-        <div id="content-wrapper" class="vanta-fixed-container">
-            <div id="no-vanta-canvas-img">
-                <div id="blackoverlay"></div>
-            </div>
-            <div id="vanta-canvas">
-                <div id="blackoverlay"></div>
-            </div>
-            
-            <!-- HERO SECTION START -->
-            <div id="home">
-
              
             <!-- FIXED BOTTOM NAV HEADER START -->
             <div id="header-btm" class="fixed-bottom align-items-center">
@@ -94,7 +87,7 @@
         
                     <nav id="navbar" class="navbar">
                         <ul>
-                            <li><a class="nav-link scrollto active" href="#">Home</a></li>
+                            <li><a class="nav-link scrollto" href="#">Home</a></li>
                             <li><a class="nav-link scrollto" href="#solutions">Solutions</a></li>
                             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                         </ul>
@@ -364,9 +357,6 @@
             <!-- ======= END BACK TO TOP ======= -->
         </div><!-- End Vanta Container -->
 
-
-
-    </main>
     </div>
 
     <!-- =======================================================
@@ -389,7 +379,7 @@
         VANTA.NET({
             el: "#vanta-canvas",
             mouseControls: true,
-            touchControls: false,
+            touchControls: true,
             gyroControls: false,
             minHeight: 200.00,
             minWidth: 200.00,

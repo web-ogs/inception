@@ -9,9 +9,8 @@
 
 html{
     background-color: #000;
-    min-height: 100%;
-    min-width: 100%;
-    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -19,14 +18,10 @@ body {
     color: #f9007b;
     background-color: #000;
     overflow-x: hidden;
-    min-height: 100%;
-    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
-
-header{
-z-index:100;
-}
 
 
 a {
@@ -181,9 +176,10 @@ hr.dashed {
 --------------------------------------------------------------*/
 
     #vanta-canvas {
-        min-width: 100%;
-        min-height: 100%;
+        width: 100vw;
+        height: 100%;
         position: fixed;
+        
     }
 
     #blackoverlay {
@@ -194,30 +190,11 @@ hr.dashed {
 
     .vanta-fixed-container {
         position: relative;
-        z-index: 0;
+        z-index: -1;
+        top:0;
+        left:0;
     }
 
-    #no-vanta-canvas-img {
-        visibility: hidden;
-    }
-
-    @media (max-width: 768px) {
-        #vanta-canvas {
-       visibility: hidden;
-        }
-        #no-vanta-canvas-img {
-            visibility: visible;
-            top:0;
-            left:0;
-            min-width: 100%;
-            min-height: 100%;
-            position: fixed;
-            background-image: url("../img/background.svg");
-                       
-             
-             }
-
-    }
 
 /*--------------------------------------------------------------
 # preloader
@@ -229,7 +206,7 @@ hr.dashed {
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 10001;
+    z-index: 1000001;
     align-items: center;
     width: 100vw;
     height: 100vh;
@@ -332,10 +309,10 @@ hr.dashed {
 }
 
 .--wipe-main-custom {
-    --transition__duration: 0.5s;
+    --transition__duration: 1s;
     --transition__easing: ease-in-out;
     animation-name: wipe-in-right;
-    animation-fill-mode: both;
+    --transition__delay: 6s;
 }
 
 .--slide-in-custom  {
@@ -416,14 +393,13 @@ hr.dashed {
 }
 
 
-
 /*--------------------------------------------------------------
 # TOP LINE
 --------------------------------------------------------------*/
 
 
 #top-line {
-    margin-top: 80px;
+   padding-top: 100px;
     width: 100%;
     height: 100px;
     display: block;
@@ -457,7 +433,7 @@ hr.dashed {
 --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: 550px;
+    height: 600px;
     top: 50%;
     margin: auto;
     vertical-align: middle;
@@ -484,13 +460,11 @@ hr.dashed {
     margin: auto;
     vertical-align: middle;
     /* spacing */
-  
-    padding-bottom: 2%;
     overflow: hidden;
 }
 #hero h1 {
     /* font-size: 7.5vw;*/
-    font-size:7.4vw;
+    font-size:7.5vw;
 
 }
 .hero-text-1 {
@@ -501,7 +475,7 @@ hr.dashed {
     margin-bottom:-2%;
 }
 .hero-text-2 {
-    padding-left: 25%;
+    padding-left: 28%;
     width: 100vw;
     height: 40%;
     overflow: hidden;
@@ -518,17 +492,6 @@ hr.dashed {
 
 
 
-@media (max-width: 900px) {
-    .hero-text-2 {
-        padding-left: 22%;  
-    }
-}
-@media (max-width: 600px) {
-    .hero-text-2 {
-        padding-left: 25%;  
-    }
-}
-
 
 
 
@@ -540,7 +503,8 @@ hr.dashed {
         position:fixed;
         left: 3em;
         right: 3em;
-        z-index:999;
+        z-index:999999;
+        top:0;
     }
 @media (max-width: 600px) {
     #header-top {     
@@ -863,7 +827,6 @@ hr.dashed {
 
 
 .scroll-area {
-    margin-top: 25px;
     margin-bottom: 25px;
     font-weight: 600;
 }
