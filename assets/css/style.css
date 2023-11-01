@@ -8,9 +8,7 @@
 --------------------------------------------------------------*/
 
 html{
-    background-color: #000;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -18,11 +16,9 @@ body {
     color: #f9007b;
     background-color: #000;
     overflow-x: hidden;
-    max-height: 100%;
-    max-width: 100%;
+    margin-top:0px;
+    min-height: 100%;
 }
-
-
 
 a {
     text-decoration: none;
@@ -30,14 +26,14 @@ a {
     transition: 0.1s;
 }
 
-    a:hover,
-    a:active,
-    a:focus {
-        color: #f9007b;
-        outline: none;
-        text-decoration: none;
-        font-weight:600;
-    }
+a:hover,
+a:active,
+a:focus {
+    color: #f9007b;
+    outline: none;
+    text-decoration: none;
+    font-weight:600;
+}
 
 p {
     padding: 0;
@@ -190,12 +186,33 @@ hr.dashed {
 
     .vanta-fixed-container {
         position: relative;
-        z-index: -1;
         top:0;
         left:0;
     }
+ #no-vanta-canvas{
+    visibility: hidden;
+    top:0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    background-image: url("../img/background.svg");
+ }
+ 
+ @media (max-width: 768px) {
 
-
+    #no-vanta-canvas{
+        visibility: visible;
+        background-image: url("../img/background.svg");
+        background-size: cover;
+ 
+     }
+     #vanta-canvas{
+        visibility: hidden;
+     }
+     
+ 
+}
 /*--------------------------------------------------------------
 # preloader
 --------------------------------------------------------------*/
@@ -270,9 +287,36 @@ hr.dashed {
     }
 }
 
+#transition-in {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden !important;
+    background: #000 center center;
+    justify-content: center;
+    animation: transition-in-right 1s ease-in-out;
+    animation-delay: 6.3s;
+}
+
+#page{
+    animation: transition-in-right 1s ease-in-out;
+    animation-delay: 6s;
+}
+
+@keyframes transition-in-right {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
 
 
-
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
 
 /*--------------------------------------------------------------
 # page load anims
@@ -299,7 +343,7 @@ hr.dashed {
 @keyframes wipe-in-right {
     from {
 
-        clip-path: inset(0 100% 0 0);
+        clip-path: inset(0 110% 0 0);
     }
 
     to {
@@ -311,7 +355,7 @@ hr.dashed {
 .--wipe-main-custom {
     --transition__duration: 1s;
     --transition__easing: ease-in-out;
-    animation-name: wipe-in-right;
+    animation-name: wipe-out-right;
     --transition__delay: 6s;
 }
 
@@ -503,7 +547,7 @@ hr.dashed {
         position:fixed;
         left: 3em;
         right: 3em;
-        z-index:999999;
+        z-index:99999;
         top:0;
     }
 @media (max-width: 600px) {
@@ -666,14 +710,9 @@ hr.dashed {
         margin-top:-1px;
     }
 
-.scrolled-offset {
-    margin-top: 70px;
-}
+
 
 @media (max-width: 992px) {
-    .scrolled-offset {
-        margin-top: 60px;
-    }
 
     #header-btm .logo img {
         height: 30px;
@@ -1081,12 +1120,12 @@ hr.dashed {
         background: none;
         text-transform: uppercase;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         padding: 10px;
-        padding-left:25px;
+        text-align: center;
         color: #f9007b;
         border: 1px solid #f9007b;
-        width: 150px;
+        width: 180px;
         margin-top: 45px;
         margin-bottom: 65px;
     }
@@ -1126,19 +1165,21 @@ hr.dashed {
         margin-right: 65px;
         text-align: right;
         color: #f9007b;   
-        margin-bottom: 65px;
+        padding-bottom: 45px;
     }
 
-    @media (max-width: 678px) {   
+    @media (max-width: 678px) { 
+
+        
         #footer .copyright {
             margin-right: 25px;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }    
     }
     @media (max-width: 600px) {   
         #footer .copyright {
             margin-right: 55px;
-            margin-bottom: 90px;
+            margin-bottom: 50px;
         }    
     }
 

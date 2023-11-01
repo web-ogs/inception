@@ -120,8 +120,8 @@ function pleasedelay2() {
     if (isFirst2) {
          jQuery.fn.headingDecodeEffect = (function ($) {
             var defaultOptions = {
-                duration: 500,
-                stepsPerGlyph: 6,
+                duration: 600,
+                stepsPerGlyph: 8,
                 codeGlyphs: "ABCDEFGHIJKLMNOPQRSTUWVXYZ1234567890",               
             };
             // get a random string from the given set,
@@ -480,23 +480,6 @@ const onscroll = (el, listener) => {
 
 
 
-
-    /**
- * Scrolls to an element with header offset
- */
-    const scrollto = (el) => {
-        let header = select('#header-top')
-        let offset = header.offsetHeight
-
-        let elementPos = select(el).offsetTop
-        window.scrollTo({
-            top: elementPos - offset,
-            behavior: 'smooth'
-        })
-    }
-
-
-
     /**
 * Back to top button
 */
@@ -566,16 +549,6 @@ const onscroll = (el, listener) => {
     });
     // SCROLL MOVEMENT END
 
-    /**
-     * Scroll with ofset on page load with hash links in the url
-     */
-    window.addEventListener('load', () => {
-        if (window.location.hash) {
-            if (select(window.location.hash)) {
-                scrollto(window.location.hash)
-            }
-        }
-    });
 
 
    

@@ -47,59 +47,61 @@
             </div>
         </div>
     </div>
+
+    <!-- <div id="transition-in"></div>-->
     
-    <div id="page" transition-style class="--wipe-main-custom">
+    <div id="page">
 
-    <div id="content-wrapper" class="vanta-fixed-container">
-        <div id="vanta-canvas">
-            <div id="blackoverlay"></div>
-        </div>
-
-  
-       
-            
-            <!-- HERO SECTION START -->
-            <div id="home">
-
-                    <!-- FIXED TOP HEADER END -->
-    <div id="header-top" class="align-items-center">
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn button button-codedText left-pad-socials">Socials</button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="https://instagram.com/inception.land/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span class="contact-codedText">Instagram</span> </a>
-                    <a href="https://twitter.com/inceptionland42/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i><span class="contact-codedText">Twitter</span></a>
-                </div>
+        <div id="content-wrapper" class="vanta-fixed-container">
+           
+            <div id="vanta-canvas">
+               <div id="blackoverlay"></div>
             </div>
-            <a href="#contact">
-                
-             <button class="dropbtn button button-codedText left-pad-hi">SAY HI</button>
-            </a>
-        </div>
+            <div id="no-vanta-canvas">
+                <div id="blackoverlay"></div>
+            </div>
+
+          
+          
+            <!-- FIXED TOP HEADER END -->
+            <div id="header-top" class="align-items-center">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn button button-codedText left-pad-socials">Socials</button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="https://instagram.com/inception.land/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span class="contact-codedText">Instagram</span> </a>
+                                <a href="https://twitter.com/inceptionland42/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i><span class="contact-codedText">Twitter</span></a>
+                            </div>
+                        </div>
+                        <a href="#contact">
+                            
+                         <button class="dropbtn button button-codedText left-pad-hi">SAY HI</button>
+                        </a>
+                    </div>
+            </div>
+             <!-- FIXED BOTTOM NAV HEADER START -->
+             <div id="header-btm" class="fixed-bottom align-items-center">
+    <div class="header-container d-flex align-items-center justify-content-between">
+
+        <a href="https://www.inception.land/" class="logo"><img src="assets/img/logo.png" alt=""></a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="#">Home</a></li>
+                <li><a class="nav-link scrollto" href="#solutions">Solutions</a></li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
+
     </div>
-
-             
-            <!-- FIXED BOTTOM NAV HEADER START -->
-            <div id="header-btm" class="fixed-bottom align-items-center">
-                <div class="header-container d-flex align-items-center justify-content-between">
-        
-                    <a href="https://www.inception.land/" class="logo"><img src="assets/img/logo.png" alt=""></a>
-        
-                    <nav id="navbar" class="navbar">
-                        <ul>
-                            <li><a class="nav-link scrollto" href="#">Home</a></li>
-                            <li><a class="nav-link scrollto" href="#solutions">Solutions</a></li>
-                            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                        </ul>
-        
-                    </nav>
-        
-                </div>
             </div>
+       
+
+      
+    
             
-
-
-
+            <!-- TOPLINE START -->
             <section id="top-line" class="card">
                 <div class="pink">
                     <div class="row">
@@ -116,7 +118,8 @@
                     </div>
                 </div>
             </section>
-            <!-- HERO SECTION END -->
+            <!-- TOPLINE END -->
+
             <!-- HERO SECTION START -->
             <div transition-style class="--hero-anim-in-custom">
                 <section id="hero" class="card">
@@ -159,11 +162,9 @@
                     </div>
                 </div>
             </section>
-        </div>
-
-
-  <!-- SOLUTIONS SECTION START -->
-  <section id="solutions" class="card">
+        
+            <!-- SOLUTIONS SECTION START -->
+            <section id="solutions" class="card">
 
             <!-- ABOUT SECTION END -->
             <div id="solutions-seperator" class="seperator">
@@ -320,7 +321,7 @@
                             <br />
                             <p>Do you need some help? We look forward to hearing about what you're working towards. Are you ready for what happens next?</p>
                          
-                                <button onclick="window.open('mailto:gm@inception.land');" class="button-codedText">SEND MAIL</button>
+                                <button onclick="window.open('mailto:gm@inception.land');" class="dropbtn button">SEND MAIL</button>
                            
                             <div class="row">
                                 <div class="col-sm-6">
@@ -339,6 +340,7 @@
                 </div>
             </section>
             <!-- CONTACT SECTION END -->
+
             <!-- ======= Footer ======= -->
             <footer id="footer">
                 <div class="card my-5">
@@ -352,12 +354,15 @@
                     </div>
                 </div>
             </footer><!-- End Footer -->
+
             <!-- ======= BACK TO TOP BTN ======= -->
             <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-sharp fa-solid fa-chevron-up"></i></a>
             <!-- ======= END BACK TO TOP ======= -->
+
+
         </div><!-- End Vanta Container -->
 
-    </div>
+    </div><!-- End Page -->
 
     <!-- =======================================================
     * JAVASCRIPT FILES
