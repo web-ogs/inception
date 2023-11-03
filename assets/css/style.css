@@ -196,14 +196,13 @@ hr.dashed {
     min-width: 100%;
     min-height: 100%;
     position: fixed;
-    background-image: url("../img/background.svg");
  }
  
  @media (max-width: 768px) {
 
     #no-vanta-canvas{
         visibility: visible;
-        background: url("../img/background.svg") no-repeat top left fixed;
+        background: url("../img/background.svg") no-repeat center center fixed;
           background-size: cover;
         -webkit-overflow-scrolling: touch;
  
