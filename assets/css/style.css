@@ -7,17 +7,13 @@
 # General
 --------------------------------------------------------------*/
 
-html{
-    min-height: 100vh;
-}
 
 body {
     font-family: "Jura", sans-serif;
     color: #f9007b;
     background-color: #000;  
     margin-top:0px;
-    height: 100vh;
-    width: 100vw;
+    overflow-x: hidden;
 }
 
 a {
@@ -306,7 +302,7 @@ hr.dashed {
 
 #page{
     animation: transition-in-right 1s ease-in-out;
-    animation-delay: 6s;
+    animation-delay: 6.1s;
 }
 
 @keyframes transition-in-right {
@@ -521,7 +517,7 @@ hr.dashed {
     margin-bottom:-2%;
 }
 .hero-text-2 {
-    padding-left: 28%;
+    padding-left: 25%;
     width: 100vw;
     height: 40%;
     overflow: hidden;
