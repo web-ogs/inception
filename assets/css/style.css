@@ -202,6 +202,7 @@ hr.dashed {
 
     #no-vanta-canvas{
         visibility: visible;
+        background-attachment: fixed;
         background: url("../img/background.svg") no-repeat center center fixed;
           background-size: cover;
         -webkit-overflow-scrolling: touch;
