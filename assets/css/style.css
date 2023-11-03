@@ -203,8 +203,9 @@ hr.dashed {
 
     #no-vanta-canvas{
         visibility: visible;
-        background-image: url("../img/background.svg");
-        background-size: cover;
+        background: url("../img/background.svg") no-repeat top left fixed;
+          background-size: cover;
+        -webkit-overflow-scrolling: touch;
  
      }
      #vanta-canvas{
